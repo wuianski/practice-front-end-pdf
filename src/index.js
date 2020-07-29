@@ -1,6 +1,9 @@
 const { degrees, PDFDocument, rgb, StandardFonts } = PDFLib;
 
 function generatePageArray(pageCount) {
+    if (pageCount < 0) { return []; }
+    if (!Number.isInteger(pageCount)) { return []; }
+
     return [...Array.from(Array(pageCount), (_, i) => i)];
 }
 
@@ -13,35 +16,17 @@ async function mergePdf() {
     const url2 = 'http://127.0.0.1:8080/page_2.pdf';
     const url3 = 'http://127.0.0.1:8080/page_3.pdf';
 
-    await merge([url1, url2, url3]);
-
-    // const existingPdfBytes1 = await fetch(url1).then(res => res.arrayBuffer());
-    // const existingPdfBytes2 = await fetch(url2).then(res => res.arrayBuffer());
-
-    // // Load a PDFDocument from each of the existing PDFs
-    // const firstPdfDoc = await PDFDocument.load(existingPdfBytes1)
-    // const secondPdfDoc = await PDFDocument.load(existingPdfBytes2)
-
-
-    // const [firstPage] = await pdfDoc.copyPages(firstPdfDoc, [0]);
-    // const [secondPage] = await pdfDoc.copyPages(secondPdfDoc, [0]);
-
-    // pdfDoc.addPage(firstPage);
-    // pdfDoc.addPage(secondPage);
-
-    // // Serialize the PDFDocument to bytes (a Uint8Array)
-    // const pdfBytes = await pdfDoc.save();
-
-    // // Trigger the browser to download the PDF document
-    // download(pdfBytes, "merged.pdf", "application/pdf");
+    let resultPdf = await merge([url1, url2, url3]);
+    const pdfBytes = await resultPdf.save();
+    download(pdfBytes, "merged.pdf", "application/pdf");
 }
 
 /**
- *
+ * Merge the all pdf
  * @param {Array<string>} urls
+ * @returns {PDFDocument}
  */
 async function merge(urls) {
-    console.log(urls);
     if (!urls ||
         !Array.isArray(urls) ||
         urls.length == 0) {
@@ -51,7 +36,6 @@ async function merge(urls) {
     let pdfDocs = [];
     for (let i = 0; i < urls.length; i++) {
         const url = urls[i];
-        console.log(url);
         let bytes = await fetch(url).then(res => res.arrayBuffer());
         let pdfDoc = await PDFDocument.load(bytes, {
             updateMetadata: false
@@ -59,13 +43,17 @@ async function merge(urls) {
         pdfDocs.push(pdfDoc);
     }
 
-    pdfDocs.forEach(pdfDoc => {
-        // Print all available metadata fields
-        console.log('Page:', generatePageArray(pdfDoc.getPageCount()));
-    });
+    let resultPdf = await PDFDocument.create();
+    for (let i = 0; i < pdfDocs.length; i++) {
+        const pdfDoc = pdfDocs[i];
 
-    // Create a new PDFDocument
-    const resultPdf = await PDFDocument.create();
+        let pages = generatePageArray(pdfDoc.getPageCount());
+        if (!pages) { return; }
+        const pdfPages = await resultPdf.copyPages(pdfDoc, pages);
+        [...pdfPages].forEach(p => {
+            resultPdf.addPage(p);
+        });
+    }
 
-    // TODO: copy all doc pages to resultPdf
+    return resultPdf;
 }

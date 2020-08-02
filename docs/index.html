@@ -12,7 +12,13 @@
 
 <body>
     <canvas id="cover" width="150" height="150"></canvas>
-    <button type="button" onclick="mergePdf()">Ok</button>
+    <button type="button" onclick="downloadPdf()">download</button>
+    <button type="button" onclick="previewPdf()">preview</button>
+
+    <div name="pdf-preview" style="height: 650px;position:relative; z-index:999">
+        <embed src="" type="application/pdf" style="overflow: auto; width: 100%; height: 100%;">
+    </div>
+
 
     <script src="index.js"></script>
 </body>

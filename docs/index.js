@@ -1,5 +1,13 @@
 const { PageSizes, degrees, PDFDocument, rgb, StandardFonts } = PDFLib;
 
+function getCanvasBlob(canvas) {
+    return new Promise(function (resolve, reject) {
+        canvas.toBlob(function (blob) {
+            resolve(blob)
+        })
+    })
+}
+
 function generatePageArray(pageCount) {
     if (pageCount < 0) { return []; }
     if (!Number.isInteger(pageCount)) { return []; }
@@ -20,7 +28,7 @@ function draw() {
     }
 }
 
-async function mergePdf() {
+async function mergePdf(callback) {
     // Fetch an existing PDF document
     const url1 = 'https://raw.githubusercontent.com/seanmars/practice-front-end-pdf/master/filehost/page_1.pdf';
     const url2 = 'https://raw.githubusercontent.com/seanmars/practice-front-end-pdf/master/filehost/page_2.pdf';
@@ -28,13 +36,30 @@ async function mergePdf() {
 
     /** @type {HTMLCanvasElement} */
     let canvas = document.getElementById("cover");
-    canvas.toBlob(async (blob) => {
-        console.log(blob);
-        let buffer = await blob.arrayBuffer();
-        console.log(buffer);
-        let resultPdf = await merge([url1, url2, url3], buffer);
-        const pdfBytes = await resultPdf.save();
+    getCanvasBlob(canvas)
+        .then(async function (blob) {
+            // console.log(blob);
+            let buffer = await blob.arrayBuffer();
+            // console.log(buffer);
+            let resultPdf = await merge([url1, url2, url3], buffer);
+
+
+            if (callback) { callback(resultPdf); }
+        });
+}
+
+async function downloadPdf() {
+    await mergePdf(async (pdf) => {
+        const pdfBytes = await pdf.save();
         download(pdfBytes, "merged.pdf", "application/pdf");
+    });
+}
+
+async function previewPdf() {
+    await mergePdf(async (pdf) => {
+        const base64 = await pdf.saveAsBase64({ dataUri: true });
+        let embed = document.querySelector('div[name=pdf-preview] embed');
+        embed.setAttribute('src', base64);
     });
 }
 

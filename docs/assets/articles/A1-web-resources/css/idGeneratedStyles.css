@@ -1,0 +1,184 @@
+body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
+	margin:0;
+	padding:0;
+	border-width:0;
+}
+body {
+	-epub-hyphens:auto;
+}
+div.物件樣式-1 {
+	border-style:solid;
+}
+p.S_自訂-V_Normal {
+	color:#000000;
+	font-family:"Source Han Sans TW Light", sans-serif;
+	font-size:16px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:300;
+	line-height:1.75;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:40px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:justify;
+	text-align-last:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.S_自訂-V_作者 {
+	color:#000000;
+	font-family:"Source Han Sans TW Regular", sans-serif;
+	font-size:16px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.75;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:40px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:justify;
+	text-align-last:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.S_自訂-V_圖說 {
+	color:#000000;
+	font-family:"Source Han Sans TW Regular", sans-serif;
+	font-size:14px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.286;
+	margin-bottom:0;
+	margin-left:20px;
+	margin-right:20px;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.S_自訂-V_大標 {
+	color:#000000;
+	font-family:"Source Han Sans TW Heavy", sans-serif;
+	font-size:22px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:900;
+	line-height:1.473;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:40px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:justify;
+	text-align-last:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.S_自訂-V_小標 {
+	color:#000000;
+	font-family:"Source Han Sans TW Medium", sans-serif;
+	font-size:16px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:500;
+	line-height:1.75;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:40px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:justify;
+	text-align-last:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+li.S_自訂-V_註 {
+	color:#000000;
+	font-family:"Source Han Sans TW Regular", sans-serif;
+	font-size:14px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.2;
+	list-style-position:outside;
+	list-style-type:decimal;
+	margin-bottom:5px;
+	margin-left:20px;
+	margin-right:0;
+	margin-top:5px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+span.CharOverride-1 {
+	font-size:58%;
+	vertical-align:super;
+}
+span.CharOverride-2 {
+	font-size:14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:line-through;
+}
+#_idContainer000 {
+	display:inline-block;
+	width:35.07%;
+}
+#_idContainer001 {
+	display:inline-block;
+	width:33.69%;
+}
+#_idContainer002, #_idContainer003 {
+	display:inline-block;
+	width:97.58%;
+}
+#_idContainer004 {
+	display:inline-block;
+	width:100.00%;
+}
+img._idGenObjectAttribute-1 {
+	height:100.00%;
+	min-width:100%;
+	width:100.00%;
+}
+div._idGenObjectStyleOverride-1 {
+	border-width:0px;
+}
+div._idGenObjectLayout-1 {
+	margin:80px auto 0 auto;
+	text-align:center;
+}
+div._idGenObjectLayout-2 {
+	text-align:left;
+}

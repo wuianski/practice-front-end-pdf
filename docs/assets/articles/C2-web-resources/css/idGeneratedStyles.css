@@ -1,0 +1,55 @@
+body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
+	margin:0;
+	padding:0;
+	border-width:0;
+}
+body {
+	-epub-hyphens:auto;
+}
+p.S_自訂-V_Normal {
+	color:#000000;
+	font-family:"Source Han Sans TW Light", sans-serif;
+	font-size:16px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:300;
+	line-height:1.75;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:40px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:justify;
+	text-align-last:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.S_自訂-V_小標 {
+	color:#000000;
+	font-family:"Source Han Sans TW Medium", sans-serif;
+	font-size:16px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:500;
+	line-height:1.75;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:40px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:justify;
+	text-align-last:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+div._idGenObjectStyleOverride-1 {
+	border-width:0px;
+}

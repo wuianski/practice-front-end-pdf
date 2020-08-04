@@ -1,0 +1,127 @@
+body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
+	margin:0;
+	padding:0;
+	border-width:0;
+}
+body {
+	-epub-hyphens:auto;
+}
+div.物件樣式-1 {
+	border-style:solid;
+}
+p.S_自訂-V_Normal {
+	color:#000000;
+	font-family:"Source Han Sans TW Light", sans-serif;
+	font-size:16px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:300;
+	line-height:1.75;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:40px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:justify;
+	text-align-last:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.S_自訂-V_圖說 {
+	color:#000000;
+	font-family:"Source Han Sans TW Regular", sans-serif;
+	font-size:14px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.286;
+	margin-bottom:0;
+	margin-left:20px;
+	margin-right:20px;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:center;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.S_自訂-V_小標 {
+	color:#000000;
+	font-family:"Source Han Sans TW Medium", sans-serif;
+	font-size:16px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:500;
+	line-height:1.75;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:40px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:justify;
+	text-align-last:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.ParaOverride-1 {
+	margin-left:10px;
+	margin-right:10px;
+}
+#_idContainer000 {
+	display:inline-block;
+	width:33.80%;
+}
+#_idContainer001 {
+	height:100.00%;
+	left:0%;
+	position:absolute;
+	top:0%;
+	width:100.00%;
+	z-index:0;
+}
+#_idContainer002 {
+	display:inline-block;
+	overflow:hidden;
+	padding:46.61% 0% 0% 0%;
+	position:relative;
+	width:36.50%;
+}
+#_idContainer003 {
+	display:inline-block;
+	width:33.74%;
+}
+#_idContainer004 {
+	display:inline-block;
+	width:34.09%;
+}
+#_idContainer005 {
+	display:inline-block;
+	width:33.38%;
+}
+#_idContainer006 {
+	display:inline-block;
+	width:97.58%;
+}
+img._idGenObjectAttribute-1 {
+	height:100.00%;
+	min-width:100%;
+	width:100.00%;
+}
+div._idGenObjectStyleOverride-1 {
+	border-width:0px;
+}
+div._idGenObjectLayout-1 {
+	margin:80px auto 0 auto;
+	text-align:center;
+}

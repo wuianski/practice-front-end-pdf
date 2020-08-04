@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #464646 url("assets/imgs/bg.jpg") no-repeat fixed center; 
+}
+#site_logo{
+    width:5.5%;
+    padding: 25px;
+}     
+#canvas {
+    width:500px;
+    height:500px;
+    border: solid 1px #000000;
+}

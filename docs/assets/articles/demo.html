@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+</head>
+
+<body>
+    <p>Height</p>
+    <div id="results"></div>
+
+
+
+    <script>
+        // addEventListener support for IE8
+        function bindEvent(element, eventName, eventHandler) {
+            if (element.addEventListener) {
+                element.addEventListener(eventName, eventHandler, false);
+            } else if (element.attachEvent) {
+                element.attachEvent('on' + eventName, eventHandler);
+            }
+        }
+
+        var iframeSource = 'http://localhost:8080/A1.html';
+
+        // Create the iframe
+        var iframe = document.createElement('iframe');
+        iframe.setAttribute('src', iframeSource);
+        iframe.setAttribute('id', 'the_iframe');
+        iframe.style.width = 700 + 'px';
+        iframe.style.height = 700 + 'px';
+        iframe.style.border = 0;
+
+        document.body.appendChild(iframe);
+
+        // Listen to message from child window
+        bindEvent(window, 'message', function(e) {
+            results.innerHTML = e.data;
+        });
+    </script>
+</body>
+
+</html>

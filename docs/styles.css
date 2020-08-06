@@ -1,15 +1,244 @@
 body {
+    height: 100vh;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background: #464646 url("assets/imgs/bg.jpg") no-repeat fixed center; 
 }
 #site_logo{
-    width:5.5%;
+    width:88px;
     padding: 25px;
-}     
+    min-width: 66px;
+} 
+#menu{
+    position: absolute;
+    left: 25px; bottom: 25px;
+    display: inline-flex;
+}
+.bt{
+    width:45px;
+    margin-right: 13px;
+    cursor: pointer;
+} 
+#bt3{
+    padding-top: 11px;
+} 
+.slides_container{
+    visibility: hidden;
+    width:600px;
+    height: 600px;
+    min-width: 600px;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+
+}
+#slideW1{
+    width:100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);   
+}
+#slideW2{
+    width:100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);   
+}
+.arrow{
+    width: 16px;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    user-select: none;
+    margin-left: -100px;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    margin-right: -100px;
+}
+#subs{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%, -50%);     
+}
+/* Fading animation */
+.slides_container .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {opacity: .1} 
+    to {opacity: 1}
+}
+@keyframes fade {
+    from {opacity: .1} 
+    to {opacity: 1}
+}
+/* Toggle this class - hide and show the popup */
+.show {
+    visibility: visible;
+    -webkit-animation: fade 1.5s;
+    animation: fade 1.5s;
+}
+
+.share_container{
+    display: none;
+    visibility: hidden;
+    width:600px;
+    height: 600px;
+    min-width: 600px;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+#share_bg{
+    width:100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+}
+#close_btn{
+    width: 18px;
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    cursor: pointer;
+}
+#download_pdf{
+    width:80px;
+    position: absolute;
+    bottom: 125px;
+    left: 110px;
+    cursor: pointer;
+}
+#share_img{
+    width:80px;
+    position: absolute;
+    bottom: 125px;
+    right: 110px;
+    cursor: pointer;
+}
+/* Fading animation */
+.share_container .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {opacity: .1} 
+    to {opacity: 1}
+}
+@keyframes fade {
+    from {opacity: .1} 
+    to {opacity: 1}
+}
+.show2 {
+    visibility: visible;
+    -webkit-animation: fade 1.5s;
+    animation: fade 1.5s;
+}
+
+
 #canvas {
     width:500px;
     height:500px;
     border: solid 1px #000000;
+}
+/*#a1{
+    height: 300px;
+}*/
+
+@media screen and (min-width: 350px) and (max-width: 667px){
+    #site_logo{
+        width: 58px;
+        padding: 15px;    
+    }
+    #menu{
+        left: 15px; bottom: 15px;
+    }
+    .bt{
+        width:35px;
+        margin-right: 10px;
+    }  
+    #bt3{
+        padding-top: 8px;
+    } 
+    .slides_container{
+        position: relative;
+        min-width: auto;
+        width: 60%;
+        height: 60%;
+    }
+    #slideW2{
+     width:80%; 
+    }
+    .prev, .next {
+        margin-left: -40px;
+    }
+    .next { 
+        margin-right: -40px;
+    }
+    .share_container{
+        position: absolute;
+        min-width: 286px;
+        width: 286px;
+    }
+    #share_bg{
+        width: 100%;
+    }
+    #download_pdf{
+        display: none;
+    }
+    #share_img{
+        bottom: 73px;
+        right: 103px;
+    }
+    #close_btn{
+        top: 60px;
+    }
+}
+@media screen and (min-width: 668px) and (max-width: 800px){
+    .slides_container{
+        position: relative;
+        min-width: auto;
+        width: 60%;
+        height: 60%;
+    }
+    #slideW1{
+     width:60%; 
+    }
+    #slideW2{
+     width:50%; 
+    }
+    .share_container{
+        position: absolute;
+        min-width: 286px;
+        width: 286px;
+    }
+    #share_bg{
+        width: 100%;
+    }
+    #download_pdf{
+        display: none;
+    }
+    #share_img{
+        bottom: 73px;
+        right: 103px;
+    }
+    #close_btn{
+        top: 60px;
+    }
+
 }

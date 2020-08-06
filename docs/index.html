@@ -4,21 +4,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF</title>
+    <title>美術館刊物與它的數位想像</title>
 
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/konva@7.0.4/konva.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script src="lib/pdf-lib.min.js"></script>
     <script src="lib/download.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <img id="site_logo" src="assets/imgs/SiteLogo.png" alt="site logo">
-    <img id="site_logo" src="assets/imgs/SiteLogo.png" alt="site logo">
-    <div class="container" id="canvas"></div>
 
-    <script src="myKonva.js"></script>
+    <img id="site_logo" src="assets/imgs/site_logo.png" alt="site logo">
+
+    <!-- Slides container -->
+    <div class="slides_container show" id="popup_slide">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <picture>
+                <source media="(max-width: 799px)" srcset="assets/imgs/slide1_mobile.png">
+                <source media="(min-width: 800px)" srcset="assets/imgs/slide1.png">
+                <img id="slideW1" src="assets/imgs/slide1.png">
+            </picture>
+        </div>
+
+        <div class="mySlides fade">
+            <picture>
+                <source media="(max-width: 799px)" srcset="assets/imgs/slide2_mobile.png">
+                <source media="(min-width: 800px)" srcset="assets/imgs/slide2.png">
+                <img id="slideW2" src="assets/imgs/slide2.png">
+            </picture>
+            <!--<div id="subs">Caption Two</div>-->
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)"><img class="arrow" src="assets/imgs/arrow_l.png"></a>
+        <a class="next" onclick="plusSlides(1)"><img class="arrow" src="assets/imgs/arrow_r.png"></a>
+    </div>
+
+    <div id="menu">
+        <div onclick="popUp1()">
+            <img class="bt" id="bt1" src="assets/imgs/bt1.png" />
+        </div>
+        <div onclick="popUp2()">
+            <img class="bt" id="bt2" src="assets/imgs/bt2.png" />
+        </div>
+        <div>
+            <img class="bt" id="bt3" src="assets/imgs/bt3.png" />
+        </div>
+    </div>
+
+    <!-- Share container -->
+    <div class="share_container show2" id="popup_share">
+        <div class="myShare fade">
+            <picture>
+                <source media="(max-width: 799px)" srcset="assets/imgs/share_mobile.png">
+                <source media="(min-width: 800px)" srcset="assets/imgs/share.png">
+                <img id="share_bg" src="assets/imgs/share.png">
+            </picture>
+            <div onclick="close_share()">
+                <img id="close_btn" src="assets/imgs/close.png">
+            </div>
+            <div onclick="download_pdf()">
+                <img id="download_pdf" src="assets/imgs/download_pdf.png">
+            </div>
+            <div onclick="share_img()">
+                <img id="share_img" src="assets/imgs/share_img.png">
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="container" id="canvas"></div>-->
+    <iframe id="a1" src="assets/articles/A1.html"></iframe>
+
+    <!--<script src="myKonva.js"></script>-->
+
+    <script src="html2canvas_konva.js"></script>
     <!--<script src="pdf.js"></script>-->
 </body>
+
+<script>
+    // slides
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+    }
+
+    // When the user clicks on bt1, open the popup intro slides.
+    function popUp1() {
+        var popup = document.getElementById("popup_slide");
+        popup.style.display = "block";
+        //popup.classList.toggle("show");
+        var popup_share = document.getElementById("popup_share");
+        popup_share.style.display = "none";
+    }
+
+    // When the user clicks on bt2, open the popup share element.
+    function popUp2() {
+        var popup_share = document.getElementById("popup_share");
+        popup_share.style.display = "block";
+        //popup_share.classList.toggle("show2");
+        var popup = document.getElementById("popup_slide");
+        popup.style.display = "none";
+    }
+
+    // Close share element.
+    function close_share() {
+        var popup_share = document.getElementById("popup_share");
+        popup_share.style.display = "none";
+    }
+
+    // Close share element.
+    function download_pdf() {
+        var popup_share = document.getElementById("popup_share");
+        popup_share.style.display = "none";
+    }
+
+    // Close share element.
+    function share_img() {
+        var popup_share = document.getElementById("popup_share");
+        popup_share.style.display = "none";
+    }
+
+</script>
+
 
 </html>

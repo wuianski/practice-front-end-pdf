@@ -21,7 +21,7 @@
             }
         }
 
-        var iframeSource = 'http://localhost:8080/A1.html';
+        var iframeSource = 'A1.html';
 
         // Create the iframe
         var iframe = document.createElement('iframe');
@@ -34,7 +34,7 @@
         document.body.appendChild(iframe);
 
         // Listen to message from child window
-        bindEvent(window, 'message', function(e) {
+        bindEvent(window, 'message', function (e) {
             results.innerHTML = e.data;
         });
     </script>

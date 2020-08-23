@@ -7,28 +7,37 @@
     <title>美術館刊物與它的數位想像</title>
 
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/konva@7.0.4/konva.min.js"></script>
-    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <script src="lib/pdf-lib.min.js"></script>
-    <script src="lib/download.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="lib/OverlayScrollbars.css">
+    <script src="lib/OverlayScrollbars.js" crossorigin="anonymous"></script>
+    <script src="lib/tween.umd.js"></script>
 </head>
 
 <body>
 
-    <img id="site_logo" src="assets/imgs/site_logo.png" alt="site logo">
+    <img id="site_logo" src="assets/imgs/site_logo.png" alt="'site logo">
 
-    <!-- Slides container -->
+    <!---- menu  ---->
+    <div id="menu">
+        <div onclick="popUp1()">
+            <img class="bt" id="bt1" src="assets/imgs/bt1.png" alt="button info">
+        </div>
+        <div onclick="popUp2()">
+            <img class="bt" id="bt2" src="assets/imgs/bt2.png" alt="button share">
+        </div>
+        <div>
+            <img class="bt" id="bt3" src="assets/imgs/bt3.png" alt="button link">
+        </div>
+    </div>
+
+    <!---- Slides container ---->
     <div class="slides_container show" id="popup_slide">
 
-        <!-- Full-width images with number and caption text -->
+        <!---- Full-width images with number and caption text ---->
         <div class="mySlides fade">
             <picture>
                 <source media="(max-width: 799px)" srcset="assets/imgs/slide1_mobile.png">
                 <source media="(min-width: 800px)" srcset="assets/imgs/slide1.png">
-                <img id="slideW1" src="assets/imgs/slide1.png">
+                <img id="slideW1" src="assets/imgs/slide1.png" alt="introduction">
             </picture>
         </div>
 
@@ -36,29 +45,17 @@
             <picture>
                 <source media="(max-width: 799px)" srcset="assets/imgs/slide2_mobile.png">
                 <source media="(min-width: 800px)" srcset="assets/imgs/slide2.png">
-                <img id="slideW2" src="assets/imgs/slide2.png">
+                <img id="slideW2" src="assets/imgs/slide2.png" alt="guide">
             </picture>
             <!--<div id="subs">Caption Two</div>-->
         </div>
 
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)"><img class="arrow" src="assets/imgs/arrow_l.png"></a>
-        <a class="next" onclick="plusSlides(1)"><img class="arrow" src="assets/imgs/arrow_r.png"></a>
+        <!---- Next and previous buttons ---->
+        <a class="prev" onclick="plusSlides(-1)"><img class="arrow" src="assets/imgs/arrow_l.png" alt="prev slide"></a>
+        <a class="next" onclick="plusSlides(1)"><img class="arrow" src="assets/imgs/arrow_r.png" alt="next slide"></a>
     </div>
 
-    <div id="menu">
-        <div onclick="popUp1()">
-            <img class="bt" id="bt1" src="assets/imgs/bt1.png" />
-        </div>
-        <div onclick="popUp2()">
-            <img class="bt" id="bt2" src="assets/imgs/bt2.png" />
-        </div>
-        <div>
-            <img class="bt" id="bt3" src="assets/imgs/bt3.png" />
-        </div>
-    </div>
-
-    <!-- Share container -->
+    <!---- Share container ---->
     <div class="share_container show2" id="popup_share">
         <div class="myShare fade">
             <picture>
@@ -78,76 +75,115 @@
         </div>
     </div>
 
-    <!--<div class="container" id="canvas"></div>-->
-    <iframe id="a1" src="assets/articles/A1.html"></iframe>
+    <script>
+
+        //// Create the A1_iframe ////
+        var iframeSource_A1 = 'assets/articles/A1.html';
+        var A1_iframe = document.createElement('iframe');
+        A1_iframe.setAttribute('src', iframeSource_A1);
+        A1_iframe.setAttribute('id', 'A1_iframe');
+        document.body.appendChild(A1_iframe);
+        //// Create the A1_iframe ////
+
+        //// Create the imgA1 ////
+        var imgA1 = document.createElement("IMG");
+        imgA1.setAttribute('id', 'imgA1');
+        imgA1.setAttribute("src", "assets/imgs/A1.png");
+        imgA1.setAttribute("alt", "imgA1");
+        imgA1.style.setProperty('width', '200px')
+        //imgA1.style.position = "absolute";
+        document.body.appendChild(imgA1);
+        //// Create the imgA1 ////
+
+        //// Receive postMessege from iframe ////
+        // addEventListener support for IE8
+        function bindEvent(element, eventName, eventHandler) {
+            if (element.addEventListener) {
+                element.addEventListener(eventName, eventHandler, false);
+            } else if (element.attachEvent) {
+                element.attachEvent('on' + eventName, eventHandler);
+            }
+        }
+        // Listen to message from child window
+        bindEvent(window, 'message', function (e) {
+            //results.innerHTML = e.data;
+            //var s1 = results.innerHTML;
+            var s1 = e.data;
+            console.log(s1);
+            //var a1 = document.getElementById('imgA1');
+            //a1.style.left = s1 + 'px';
+            if (s1 > 0 && s1 < 99) {
+                onUpdateEventA();
+            } else if (s1 > 100) {
+                onUpdateEventB();
+            };
+
+        });
+        //// Receive postMessege from iframe ////
+
+        //// Tween the imgA1 ////
+        // Setup the animation loop.
+        /*function animate(time) {
+            requestAnimationFrame(animate)
+            TWEEN.update(time)
+        }
+        requestAnimationFrame(animate)*/
+
+        const coords = { x: 0, y: 0 } // Start at (0, 0)
+        const scale = { sx: 1, sy: 1 } // Start at (1, 1)
+        var groupA = new TWEEN.Group()
+        var groupB = new TWEEN.Group()
+        const tweenA = new TWEEN.Tween(coords, groupA) // Create a new tween that modifies 'coords'.
+            .to({ x: '+150', y: '+130' }, 1000) // Move to (+150, +130) in 1 second.
+            .easing(TWEEN.Easing.Quadratic.Out) // Use an easing function to make the animation smooth.
+            .onUpdate(() => {
+                // Called after tween.js updates 'coords'.
+                // Move 'imgA1' to the position described by 'coords' with a CSS translation.
+                imgA1.style.setProperty('transform', `translate(${coords.x}px, ${coords.y}px)`)
+                //imgA1.style.setProperty('transform', `scale(${coords.s1}, ${coords.s2})`)
+            })
+            .start() // Start the tween immediately.  
+
+        const tweenB = new TWEEN.Tween(scale, groupB) // Create a new tween that modifies 'scale'.
+            .to({ sx: '+1', sy: '+1' }, 1000) // Move to (+1, +1) in 1 second.
+            .easing(TWEEN.Easing.Quadratic.Out) // Use an easing function to make the animation smooth.
+            .onUpdate(() => {
+                // Called after tween.js updates 'scale'.
+                // Move 'imgA1' to the size described by 'scale' with a CSS translation.
+                imgA1.style.setProperty('transform', `scale(${scale.sx}, ${scale.sy})`)
+                //imgA1.style.setProperty('transform', `scale(${coords.s1}, ${coords.s2})`)
+            })
+            .start() // Start the tween immediately.  
+
+        function onUpdateEventA() {
+            //TWEEN.update();
+            groupA.update();
+            tweenA.start();
+        }
+        function onUpdateEventB() {
+            //TWEEN.update();
+            groupB.update();
+            tweenB.start();
+        }
+
+        //// Tween the imgA1 ////
+
+
+        var iframeSource_A2 = 'assets/articles/A2.html';
+        // Create the iframe
+        var A2_iframe = document.createElement('iframe');
+        A2_iframe.setAttribute('src', iframeSource_A2);
+        A2_iframe.setAttribute('id', 'A2_iframe');
+        document.body.appendChild(A2_iframe);
+
+
+
+    </script>
 
     <!--<script src="myKonva.js"></script>-->
 
-    <script src="html2canvas_konva.js"></script>
     <!--<script src="pdf.js"></script>-->
+    <script src="transition.js"></script>
 </body>
-
-<script>
-    // slides
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slides[slideIndex - 1].style.display = "block";
-    }
-
-    // When the user clicks on bt1, open the popup intro slides.
-    function popUp1() {
-        var popup = document.getElementById("popup_slide");
-        popup.style.display = "block";
-        //popup.classList.toggle("show");
-        var popup_share = document.getElementById("popup_share");
-        popup_share.style.display = "none";
-    }
-
-    // When the user clicks on bt2, open the popup share element.
-    function popUp2() {
-        var popup_share = document.getElementById("popup_share");
-        popup_share.style.display = "block";
-        //popup_share.classList.toggle("show2");
-        var popup = document.getElementById("popup_slide");
-        popup.style.display = "none";
-    }
-
-    // Close share element.
-    function close_share() {
-        var popup_share = document.getElementById("popup_share");
-        popup_share.style.display = "none";
-    }
-
-    // Close share element.
-    function download_pdf() {
-        var popup_share = document.getElementById("popup_share");
-        popup_share.style.display = "none";
-    }
-
-    // Close share element.
-    function share_img() {
-        var popup_share = document.getElementById("popup_share");
-        popup_share.style.display = "none";
-    }
-
-</script>
-
 
 </html>

@@ -50,55 +50,10 @@ p.S_自訂-V_小標 {
 	text-transform:none;
 	widows:1;
 }
-p.S_自訂-V_註 {
-	color:#000000;
-	font-family:"Source Han Sans TW Regular", sans-serif;
-	font-size:14px;
-	font-style:normal;
-	font-variant:normal;
-	font-weight:normal;
-	line-height:1.2;
-	list-style-position:outside;
-	list-style-type:decimal;
-	margin-bottom:5px;
-	margin-left:20px;
-	margin-right:0;
-	margin-top:5px;
-	orphans:1;
-	page-break-after:auto;
-	page-break-before:auto;
-	text-align:left;
-	text-decoration:none;
-	text-indent:0;
-	text-transform:none;
-	widows:1;
-}
-p.ParaOverride-1 {
-	list-style-type:none;
-}
-span.CharOverride-1 {
-	font-size:58%;
-	vertical-align:super;
-}
-span.CharOverride-2 {
-	font-family:"Source Han Sans TW Light", sans-serif;
-	font-size:15px;
-	font-style:normal;
-	font-weight:300;
-}
-span.CharOverride-3 {
-	font-size:14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:line-through;
-}
-#_idContainer000 {
-	display:inline-block;
-	width:61.07%;
+span.超連結 {
+	color:#4f5cd6;
+	text-decoration:underline;
 }
 div._idGenObjectStyleOverride-1 {
 	border-width:0px;
-}
-div._idGenObjectLayout-1 {
-	text-align:left;
 }

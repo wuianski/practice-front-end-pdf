@@ -9,9 +9,8 @@
     <p>Height</p>
     <div id="results"></div>
 
-
-
     <script>
+
         // addEventListener support for IE8
         function bindEvent(element, eventName, eventHandler) {
             if (element.addEventListener) {
@@ -33,10 +32,21 @@
 
         document.body.appendChild(iframe);
 
+
+        let i
         // Listen to message from child window
         bindEvent(window, 'message', function (e) {
             results.innerHTML = e.data;
+            test(e.data);
+            //console.log(test(e.data));
+            //console.log(e.data);
         });
+
+        function test(msg) {
+            //console.log(msg);
+            return msg;
+        }
+
     </script>
 </body>
 

@@ -1,8 +1,16 @@
 var elmnt = document.getElementById("canvas");
 var width = elmnt.offsetWidth;
 var height = elmnt.offsetHeight;
-//var width = window.innerWidth;
-//var height = window.innerHeight;
+// Listen to message from child window
+/*bindEvent(window, 'message', function (a1) {
+    results.innerHTML = a1.data;
+    //console.log(results);
+    var pathA = document.getElementById("results").innerHTML;
+    //return (pathA);
+    //console.log(pathA);
+});*/
+//var pathA = document.getElementById("results").innerHTML;
+//console.log(pathA);
 
 var stage = new Konva.Stage({
     container: '.container',
@@ -13,7 +21,7 @@ var stage = new Konva.Stage({
 var layer = new Konva.Layer();
 stage.add(layer);
 
-// A1
+//A1
 var A1Img = new Konva.Image({
     x: Math.random() * stage.width(),
     y: Math.random() * stage.height(),
@@ -21,6 +29,7 @@ var A1Img = new Konva.Image({
     width: 200,
     height: 137,
     draggable: true,
+
 });
 layer.add(A1Img);
 

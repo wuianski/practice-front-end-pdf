@@ -28,11 +28,28 @@ p.S_自訂-V_Normal {
 	text-transform:none;
 	widows:1;
 }
+span.超連結 {
+	color:#4f5cd6;
+	text-decoration:underline;
+}
 span.字元樣式1 {
 	font-family:"Source Han Sans TW Medium", sans-serif;
 	font-style:normal;
 	font-weight:500;
 }
+#_idContainer000 {
+	display:inline-block;
+	width:99.52%;
+}
+img._idGenObjectAttribute-1 {
+	height:100.00%;
+	min-width:100%;
+	width:100.00%;
+}
 div._idGenObjectStyleOverride-1 {
 	border-width:0px;
+}
+div._idGenObjectLayout-1 {
+	margin:80px auto 10px auto;
+	text-align:center;
 }

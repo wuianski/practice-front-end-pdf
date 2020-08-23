@@ -50,6 +50,10 @@ p.S_自訂-V_小標 {
 	text-transform:none;
 	widows:1;
 }
+span.超連結 {
+	color:#4f5cd6;
+	text-decoration:underline;
+}
 span.字元樣式1 {
 	font-family:"Source Han Sans TW Medium", sans-serif;
 	font-style:normal;

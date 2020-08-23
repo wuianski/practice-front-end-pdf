@@ -118,7 +118,7 @@ p.S_自訂-V_小標 {
 	text-transform:none;
 	widows:1;
 }
-li.S_自訂-V_註 {
+p.S_自訂-V_註 {
 	color:#000000;
 	font-family:"Source Han Sans TW Regular", sans-serif;
 	font-size:14px;
@@ -131,25 +131,28 @@ li.S_自訂-V_註 {
 	margin-bottom:5px;
 	margin-left:20px;
 	margin-right:0;
-	margin-top:5px;
+	margin-top:80px;
 	orphans:1;
 	page-break-after:auto;
 	page-break-before:auto;
 	text-align:left;
 	text-decoration:none;
-	text-indent:0;
+	text-indent:-20px;
 	text-transform:none;
 	widows:1;
+}
+span.超連結 {
+	color:#4f5cd6;
+	text-decoration:underline;
+}
+span._idGenBNMarker-1 {
+	display:inline-block;
+	text-indent:0;
+	width:21px;
 }
 span.CharOverride-1 {
 	font-size:58%;
 	vertical-align:super;
-}
-span.CharOverride-2 {
-	font-size:14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:line-through;
 }
 #_idContainer000 {
 	display:inline-block;
@@ -163,10 +166,6 @@ span.CharOverride-2 {
 	display:inline-block;
 	width:97.58%;
 }
-#_idContainer004 {
-	display:inline-block;
-	width:100.00%;
-}
 img._idGenObjectAttribute-1 {
 	height:100.00%;
 	min-width:100%;
@@ -176,9 +175,6 @@ div._idGenObjectStyleOverride-1 {
 	border-width:0px;
 }
 div._idGenObjectLayout-1 {
-	margin:80px auto 0 auto;
+	margin:80px auto 10px auto;
 	text-align:center;
-}
-div._idGenObjectLayout-2 {
-	text-align:left;
 }

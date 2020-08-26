@@ -5,6 +5,7 @@ body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
 }
 body {
 	-epub-hyphens:auto;
+	padding-right: 30px;
 }
 p.S_自訂-V_Normal {
 	color:#000000;

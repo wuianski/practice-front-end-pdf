@@ -61,53 +61,39 @@
 		<p class="S_自訂-V_註"><span class="_idGenBNMarker-1">1.</span>至本文截稿期間，「書中美術館」已累積約20多位藝術家的作品製作。</p>
 	</div>
 	<script>
-		//var instance = OverlayScrollbars(document.querySelectorAll('body'), { className: "os-theme-round-dark", });		
-
-		/*document.addEventListener("DOMContentLoaded", function () {
-			//The first argument are the elements to which the plugin shall be initialized
-			//The second argument has to be at least a empty object or a object with your desired options
-			OverlayScrollbars(document.querySelectorAll('body'), {
-				className: "os-theme-round-dark",
-				nativeScrollbarsOverlaid: {
-					showNativeScrollbars: false,
-					initialize: true
-				},
-				callbacks: {
-					onInitializationWithdrawn: null,
-				},
-	
-			});
-		});*/
-
 		// addEventListener support for IE8 
-		function bindEvent(element, eventName, eventHandler) {
+		function bindEvent(instance, element, eventName, eventHandler) {
 			if (element.addEventListener) {
 				element.addEventListener(eventName, eventHandler, false);
 			} else if (element.attachEvent) {
 				element.attachEvent('on' + eventName,
 					eventHandler);
 			}
-		} // Send a message to the parent 
-		var sendMessage = function (msg) {
-			window.parent.postMessage(msg, '*');
-		};
-
-		bindEvent(window, 'scroll', function (e) {
-			//var scroll_Y = window.scrollY;
-			var instance = OverlayScrollbars(document.querySelectorAll('body'), { className: "os-theme-round-dark", });
 			instance.options({
+				//paddingAbsolute: true,
 				callbacks: {
 					onScroll: function (e) {
 						var verticalHandle = instance.getElements("scrollbarVertical.handle");
 						var transform_value = getComputedStyle(verticalHandle).getPropertyValue('transform');
 						var matrix = new WebKitCSSMatrix(transform_value);
 						var i = matrix.m42;
-						console.log(e);
+						//console.log(e);
 						sendMessage(i);
 					}
 				}
 			});
+		} // Send a message to the parent 
+		var sendMessage = function (msg) {
+			var data = {
+				'id': 'a1',
+				'value': msg
+			}
+			window.parent.postMessage(data, '*');
+		};
+		var instance = OverlayScrollbars(document.querySelectorAll('body'), { className: "os-theme-round-dark", paddingAbsolute: true, });
 
+		bindEvent(instance, window, 'scroll', function (e) {
+			//var scroll_Y = window.scrollY;
 		});
 	</script>
 </body>

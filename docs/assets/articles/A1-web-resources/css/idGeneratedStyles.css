@@ -5,6 +5,7 @@ body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
 }
 body {
 	-epub-hyphens:auto;
+	padding-right: 30px;
 }
 div.物件樣式-1 {
 	border-style:solid;

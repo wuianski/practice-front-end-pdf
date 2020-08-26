@@ -173,6 +173,12 @@ body {
     clip-path:inset(0px);
     min-width: 700px;
 }
+#img0{
+    height: 50px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
 #A1_iframe_div{
     position: absolute;
     background-color:#eb5514;

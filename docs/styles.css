@@ -186,6 +186,7 @@ body {
     padding:15px 0px 15px 15px;
     min-width: 450px;
     cursor: pointer;
+    /*right: -28%;*/
 }
 #A2_iframe_div{
     position: absolute;
@@ -361,5 +362,8 @@ body {
     #close_btn{
         top: 60px;
     }
+    /*#A1_iframe_div{
+        left: 5px ;
+    }*/
 
 }

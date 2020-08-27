@@ -94,9 +94,9 @@
             width: ['35%', '49%'],
             height: ['75%', '100%'],
             top: ['13%', '0%'],
-            left: ['5%', '0%'],
+            left: ['100px', '0px'],
             zIndex: {
-                value: [0, 99],
+                value: [1, 99],
                 round: true
             },
             loop: false,
@@ -106,6 +106,25 @@
             easing: "easeInOutSine"
         })
         //// Animation after click All_iframe_div ////
+
+        //// Slide in imgContainer ////
+        const SlideContainerAni = anime({
+            targets: '#imgContainer',
+            width: ['35%', '35%'],
+            height: ['75%', '75%'],
+            top: ['13%', '13%'],
+            left: ['-800px', '100px'],
+            zIndex: {
+                value: [1, 1],
+                round: true
+            },
+            loop: false,
+            delay: 2700,
+            duration: 500,
+            autoplay: false,
+            easing: "easeInOutSine"
+        })
+        //// Slide in aimgContainer ////
 
         //// Create the RandomPosition for imgs in imgContainer ////
         function getRandomPosition(element) {
@@ -374,6 +393,7 @@
         //// Create the div which contain A1_iframe ////
         var A1_iframe_div = document.createElement('div');
         A1_iframe_div.setAttribute('id', 'A1_iframe_div');
+        A1_iframe_div.setAttribute('class', 'A1_iframe_div');
         document.body.appendChild(A1_iframe_div);
         var A1_iframe_title = document.createElement('img');
         A1_iframe_title.src = "assets/imgs/keywordA1.png";
@@ -390,32 +410,16 @@
         var A1_iframe = document.createElement('iframe');
         A1_iframe.setAttribute('src', iframeSource_A1);
         A1_iframe.setAttribute('id', 'A1_iframe');
-        //A1_iframe.style.zIndex = 1;
         A1_iframe_div.appendChild(A1_iframe);
         //// Create the A1_iframe ////
 
-        //// Animation in the beginning A1_iframe_div ////
-        const A1startAni = anime({
-            targets: '#A1_iframe_div',
-            //width: ['30%', '50%'],
-            //height: ['46%', '100%'],
-            top: ['45%', '45%'],
-            right: ['-28%', '25%'],
-            loop: false,
-            delay: 5000,
-            duration: 500,
-            autoplay: true,
-            easing: "easeInOutSine"
-        })
-        //// Animation in the beginning A1_iframe_div ////
-
-        //// Scale up after click A1_iframe_div ////
+        //// Scale up after click A1_iframe_scale ////
         const A1zindexAni = anime({
             targets: '#A1_iframe_div',
             width: ['23%', '50%'],
             height: ['46%', '100%'],
             top: ['45%', '0%'],
-            right: ['25%', '0%'],
+            right: ['375px', '0px'],
             zIndex: {
                 value: [10, 99],
                 round: true
@@ -427,7 +431,8 @@
             easing: "easeInOutSine"
         })
 
-        document.querySelector('#A1_iframe_div').onclick = function () {
+        document.querySelector('#A1_iframe_scale').onclick = function () {
+
             A1zindexAni.play();
             ContainerAni.play();
             A1zindexAni.finished.then(() => {
@@ -443,8 +448,70 @@
                 document.getElementById('A1_iframe_scale').src = 'assets/imgs/scaleDown.png';
             }
         }
-        //// Scale up after click A1_iframe_div ////
+        //// Scale up after click A1_iframe_scale ////
 
+        //// Slide in after click A1_iframe_div ////
+        const A1startAni = anime({
+            targets: '#A1_iframe_div',
+            width: ['23%', '23%'],
+            height: ['46%', '46%'],
+            top: ['45%', '45%'],
+            right: ['-410px', '375px'],
+            zIndex: {
+                value: [10, 10],
+                round: true
+            },
+            loop: false,
+            delay: 2400,
+            duration: 500,
+            autoplay: false,
+            easing: "easeInOutSine"
+        })
+        // A1_iframe_div can only click once //
+        document.querySelector('#A1_iframe_div').onclick = function () {
+            /*A1startAni.play();
+            SlideContainerAni.play();
+            SlideContainerAni.finished.then(() => {
+                var popup = document.getElementById("popup_slide");
+                popup.style.display = "none";
+                anime.remove('#imgContainer');
+            })
+            document.getElementById('A1_iframe_div').onclick = () => false;*/
+            C3startAni.play();
+            C2startAni.play();
+            C1startAni.play();
+            B3startAni.play();
+            B2startAni.play();
+            B1startAni.play();
+            A3startAni.play();
+            A2startAni.play();
+            A1startAni.play();
+            SlideContainerAni.play();
+            SlideContainerAni.finished.then(() => {
+                C3startAni.reverse();
+                C2startAni.reverse();
+                C1startAni.reverse();
+                B3startAni.reverse();
+                B2startAni.reverse();
+                B1startAni.reverse();
+                A3startAni.reverse();
+                A2startAni.reverse();
+                A1startAni.reverse();
+                SlideContainerAni.reverse();
+            })
+            /*var popup = document.getElementById("popup_slide");
+            popup.style.display = "none";*/
+            document.getElementById('C3_iframe_div').onclick = () => false;
+            document.getElementById('C2_iframe_div').onclick = () => false;
+            document.getElementById('C1_iframe_div').onclick = () => false;
+            document.getElementById('B3_iframe_div').onclick = () => false;
+            document.getElementById('B2_iframe_div').onclick = () => false;
+            document.getElementById('B1_iframe_div').onclick = () => false;
+            document.getElementById('A3_iframe_div').onclick = () => false;
+            document.getElementById('A2_iframe_div').onclick = () => false;
+            document.getElementById('A1_iframe_div').onclick = () => false;
+        }
+        //// Slide in after click A1_iframe_div ////
 
         //// Create the div which contain A2_iframe ////
         var A2_iframe_div = document.createElement('div');
@@ -465,30 +532,16 @@
         var A2_iframe = document.createElement('iframe');
         A2_iframe.setAttribute('src', iframeSource_A2);
         A2_iframe.setAttribute('id', 'A2_iframe');
-        //A2_iframe.style.zIndex = 1;
         A2_iframe_div.appendChild(A2_iframe);
         //// Create the A2_iframe ////
 
-        //// Animation in the beginning A2_iframe_div ////
-        const A2startAni = anime({
-            targets: '#A2_iframe_div',
-            top: ['40%', '40%'],
-            right: ['-28%', '15%'],
-            loop: false,
-            delay: 4500,
-            duration: 500,
-            autoplay: true,
-            easing: "easeInOutSine"
-        })
-        //// Animation in the beginning A2_iframe_div ////
-
-        //// Scale up after click A2_iframe_div ////
+        //// Scale up after click A2_iframe_scale ////
         const A2zindexAni = anime({
             targets: '#A2_iframe_div',
             width: ['23%', '50%'],
             height: ['46%', '100%'],
             top: ['40%', '0%'],
-            right: ['15%', '0%'],
+            right: ['230px', '0px'],
             zIndex: {
                 value: [9, 99],
                 round: true
@@ -500,13 +553,15 @@
             easing: "easeInOutSine"
         })
 
-        document.querySelector('#A2_iframe_div').onclick = function () {
+        document.querySelector('#A2_iframe_scale').onclick = function () {
+
             A2zindexAni.play();
             ContainerAni.play();
             A2zindexAni.finished.then(() => {
                 A2zindexAni.reverse();
                 ContainerAni.reverse();
             })
+
             var img = document.getElementById('A2_iframe_scale').src;
             if (img.indexOf('scaleDown.png') != -1) {
                 document.getElementById('A2_iframe_scale').src = 'assets/imgs/scaleUp.png';
@@ -515,7 +570,70 @@
                 document.getElementById('A2_iframe_scale').src = 'assets/imgs/scaleDown.png';
             }
         }
-        //// Scale up after click A2_iframe_div ////
+        //// Scale up after click A2_iframe_scale ////
+
+        //// Slide in after click A2_iframe_div ////
+        const A2startAni = anime({
+            targets: '#A2_iframe_div',
+            width: ['23%', '23%'],
+            height: ['46%', '46%'],
+            top: ['40%', '40%'],
+            right: ['-410px', '230px'],
+            zIndex: {
+                value: [9, 9],
+                round: true
+            },
+            loop: false,
+            delay: 2100,
+            duration: 500,
+            autoplay: false,
+            easing: "easeInOutSine"
+        })
+        // A2_iframe_div can only click once //
+        document.querySelector('#A2_iframe_div').onclick = function () {
+            /*A2startAni.play();
+            SlideContainerAni.play();
+            SlideContainerAni.finished.then(() => {
+                anime.remove('#imgContainer');
+                var popup = document.getElementById("popup_slide");
+                popup.style.display = "none";
+            })
+            document.getElementById('A2_iframe_div').onclick = () => false;*/
+            C3startAni.play();
+            C2startAni.play();
+            C1startAni.play();
+            B3startAni.play();
+            B2startAni.play();
+            B1startAni.play();
+            A3startAni.play();
+            A2startAni.play();
+            A1startAni.play();
+            SlideContainerAni.play();
+            SlideContainerAni.finished.then(() => {
+                C3startAni.reverse();
+                C2startAni.reverse();
+                C1startAni.reverse();
+                B3startAni.reverse();
+                B2startAni.reverse();
+                B1startAni.reverse();
+                A3startAni.reverse();
+                A2startAni.reverse();
+                A1startAni.reverse();
+                SlideContainerAni.reverse();
+            })
+            /*var popup = document.getElementById("popup_slide");
+            popup.style.display = "none";*/
+            document.getElementById('C3_iframe_div').onclick = () => false;
+            document.getElementById('C2_iframe_div').onclick = () => false;
+            document.getElementById('C1_iframe_div').onclick = () => false;
+            document.getElementById('B3_iframe_div').onclick = () => false;
+            document.getElementById('B2_iframe_div').onclick = () => false;
+            document.getElementById('B1_iframe_div').onclick = () => false;
+            document.getElementById('A3_iframe_div').onclick = () => false;
+            document.getElementById('A2_iframe_div').onclick = () => false;
+            document.getElementById('A1_iframe_div').onclick = () => false;
+        }
+        //// Slide in after click A2_iframe_div ////
 
         //// Create the div which contain A3_iframe ////
         var A3_iframe_div = document.createElement('div');
@@ -536,30 +654,16 @@
         var A3_iframe = document.createElement('iframe');
         A3_iframe.setAttribute('src', iframeSource_A3);
         A3_iframe.setAttribute('id', 'A3_iframe');
-        //A2_iframe.style.zIndex = 1;
         A3_iframe_div.appendChild(A3_iframe);
         //// Create the A3_iframe ////
 
-        //// Animation in the beginning A3_iframe_div ////
-        const A3startAni = anime({
-            targets: '#A3_iframe_div',
-            top: ['35%', '35%'],
-            right: ['-28%', '10%'],
-            loop: false,
-            delay: 4000,
-            duration: 500,
-            autoplay: true,
-            easing: "easeInOutSine"
-        })
-        //// Animation in the beginning A3_iframe_div ////
-
-        //// Scale up after click A3_iframe_div ////
+        //// Scale up after click A3_iframe_scale ////
         const A3zindexAni = anime({
             targets: '#A3_iframe_div',
             width: ['23%', '50%'],
             height: ['46%', '100%'],
             top: ['35%', '0%'],
-            right: ['10%', '0%'],
+            right: ['85px', '0px'],
             zIndex: {
                 value: [8, 99],
                 round: true
@@ -571,13 +675,15 @@
             easing: "easeInOutSine"
         })
 
-        document.querySelector('#A3_iframe_div').onclick = function () {
+        document.querySelector('#A3_iframe_scale').onclick = function () {
+
             A3zindexAni.play();
             ContainerAni.play();
             A3zindexAni.finished.then(() => {
                 A3zindexAni.reverse();
                 ContainerAni.reverse();
             })
+
             var img = document.getElementById('A3_iframe_scale').src;
             if (img.indexOf('scaleDown.png') != -1) {
                 document.getElementById('A3_iframe_scale').src = 'assets/imgs/scaleUp.png';
@@ -586,7 +692,70 @@
                 document.getElementById('A3_iframe_scale').src = 'assets/imgs/scaleDown.png';
             }
         }
-        //// Scale up after click A3_iframe_div ////
+        //// Scale up after click A3_iframe_scale ////
+
+        //// Slide in after click A3_iframe_div ////
+        const A3startAni = anime({
+            targets: '#A3_iframe_div',
+            width: ['23%', '23%'],
+            height: ['46%', '46%'],
+            top: ['35%', '35%'],
+            right: ['-410px', '85px'],
+            zIndex: {
+                value: [8, 8],
+                round: true
+            },
+            loop: false,
+            delay: 1800,
+            duration: 500,
+            autoplay: false,
+            easing: "easeInOutSine"
+        })
+        // A3_iframe_div can only click once //
+        document.querySelector('#A3_iframe_div').onclick = function () {
+            /*A3startAni.play();
+            SlideContainerAni.play();
+            SlideContainerAni.finished.then(() => {
+                anime.remove('#imgContainer');
+                var popup = document.getElementById("popup_slide");
+                popup.style.display = "none";
+            })
+            document.getElementById('A3_iframe_div').onclick = () => false;*/
+            C3startAni.play();
+            C2startAni.play();
+            C1startAni.play();
+            B3startAni.play();
+            B2startAni.play();
+            B1startAni.play();
+            A3startAni.play();
+            A2startAni.play();
+            A1startAni.play();
+            SlideContainerAni.play();
+            SlideContainerAni.finished.then(() => {
+                C3startAni.reverse();
+                C2startAni.reverse();
+                C1startAni.reverse();
+                B3startAni.reverse();
+                B2startAni.reverse();
+                B1startAni.reverse();
+                A3startAni.reverse();
+                A2startAni.reverse();
+                A1startAni.reverse();
+                SlideContainerAni.reverse();
+            })
+            /*var popup = document.getElementById("popup_slide");
+            popup.style.display = "none";*/
+            document.getElementById('C3_iframe_div').onclick = () => false;
+            document.getElementById('C2_iframe_div').onclick = () => false;
+            document.getElementById('C1_iframe_div').onclick = () => false;
+            document.getElementById('B3_iframe_div').onclick = () => false;
+            document.getElementById('B2_iframe_div').onclick = () => false;
+            document.getElementById('B1_iframe_div').onclick = () => false;
+            document.getElementById('A3_iframe_div').onclick = () => false;
+            document.getElementById('A2_iframe_div').onclick = () => false;
+            document.getElementById('A1_iframe_div').onclick = () => false;
+        }
+        //// Slide in after click A3_iframe_div ////
 
         //// Create the div which contain B1_iframe ////
         var B1_iframe_div = document.createElement('div');
@@ -607,30 +776,16 @@
         var B1_iframe = document.createElement('iframe');
         B1_iframe.setAttribute('src', iframeSource_B1);
         B1_iframe.setAttribute('id', 'B1_iframe');
-        //A2_iframe.style.zIndex = 1;
         B1_iframe_div.appendChild(B1_iframe);
         //// Create the B1_iframe ////
 
-        //// Animation in the beginning B1_iframe_div ////
-        const B1startAni = anime({
-            targets: '#B1_iframe_div',
-            top: ['30%', '30%'],
-            right: ['-28%', '12%'],
-            loop: false,
-            delay: 3500,
-            duration: 500,
-            autoplay: true,
-            easing: "easeInOutSine"
-        })
-        //// Animation in the beginning B1_iframe_div ////
-
-        //// Scale up after click B1_iframe_div ////
+        //// Scale up after click B1_iframe_scale ////
         const B1zindexAni = anime({
             targets: '#B1_iframe_div',
             width: ['23%', '50%'],
             height: ['46%', '100%'],
             top: ['30%', '0%'],
-            right: ['12%', '0%'],
+            right: ['165px', '0px'],
             zIndex: {
                 value: [7, 99],
                 round: true
@@ -642,13 +797,15 @@
             easing: "easeInOutSine"
         })
 
-        document.querySelector('#B1_iframe_div').onclick = function () {
+        document.querySelector('#B1_iframe_scale').onclick = function () {
+
             B1zindexAni.play();
             ContainerAni.play();
             B1zindexAni.finished.then(() => {
                 B1zindexAni.reverse();
                 ContainerAni.reverse();
             })
+
             var img = document.getElementById('B1_iframe_scale').src;
             if (img.indexOf('scaleDown.png') != -1) {
                 document.getElementById('B1_iframe_scale').src = 'assets/imgs/scaleUp.png';
@@ -657,7 +814,70 @@
                 document.getElementById('B1_iframe_scale').src = 'assets/imgs/scaleDown.png';
             }
         }
-        //// Scale up after click B1_iframe_div ////
+        //// Scale up after click B1_iframe_scale ////
+
+        //// Slide in after click B1_iframe_div ////
+        const B1startAni = anime({
+            targets: '#B1_iframe_div',
+            width: ['23%', '23%'],
+            height: ['46%', '46%'],
+            top: ['30%', '30%'],
+            right: ['-410px', '165px'],
+            zIndex: {
+                value: [7, 7],
+                round: true
+            },
+            loop: false,
+            delay: 1500,
+            duration: 500,
+            autoplay: false,
+            easing: "easeInOutSine"
+        })
+        // B1_iframe_div can only click once //
+        document.querySelector('#B1_iframe_div').onclick = function () {
+            /*B1startAni.play();
+            SlideContainerAni.play();
+            SlideContainerAni.finished.then(() => {
+                anime.remove('#imgContainer');
+                var popup = document.getElementById("popup_slide");
+                popup.style.display = "none";
+            })
+            document.getElementById('B1_iframe_div').onclick = () => false;*/
+            C3startAni.play();
+            C2startAni.play();
+            C1startAni.play();
+            B3startAni.play();
+            B2startAni.play();
+            B1startAni.play();
+            A3startAni.play();
+            A2startAni.play();
+            A1startAni.play();
+            SlideContainerAni.play();
+            SlideContainerAni.finished.then(() => {
+                C3startAni.reverse();
+                C2startAni.reverse();
+                C1startAni.reverse();
+                B3startAni.reverse();
+                B2startAni.reverse();
+                B1startAni.reverse();
+                A3startAni.reverse();
+                A2startAni.reverse();
+                A1startAni.reverse();
+                SlideContainerAni.reverse();
+            })
+            /*var popup = document.getElementById("popup_slide");
+            popup.style.display = "none";*/
+            document.getElementById('C3_iframe_div').onclick = () => false;
+            document.getElementById('C2_iframe_div').onclick = () => false;
+            document.getElementById('C1_iframe_div').onclick = () => false;
+            document.getElementById('B3_iframe_div').onclick = () => false;
+            document.getElementById('B2_iframe_div').onclick = () => false;
+            document.getElementById('B1_iframe_div').onclick = () => false;
+            document.getElementById('A3_iframe_div').onclick = () => false;
+            document.getElementById('A2_iframe_div').onclick = () => false;
+            document.getElementById('A1_iframe_div').onclick = () => false;
+        }
+        //// Slide in after click B1_iframe_div ////
 
         //// Create the div which contain B2_iframe ////
         var B2_iframe_div = document.createElement('div');
@@ -678,30 +898,16 @@
         var B2_iframe = document.createElement('iframe');
         B2_iframe.setAttribute('src', iframeSource_B2);
         B2_iframe.setAttribute('id', 'B2_iframe');
-        //A2_iframe.style.zIndex = 1;
         B2_iframe_div.appendChild(B2_iframe);
         //// Create the B2_iframe ////
 
-        //// Animation in the beginning B2_iframe_div ////
-        const B2startAni = anime({
-            targets: '#B2_iframe_div',
-            top: ['25%', '25%'],
-            right: ['-28%', '14%'],
-            loop: false,
-            delay: 3000,
-            duration: 500,
-            autoplay: true,
-            easing: "easeInOutSine"
-        })
-        //// Animation in the beginning B2_iframe_div ////
-
-        //// Scale up after click B2_iframe_div ////
+        //// Scale up after click B2_iframe_scale ////
         const B2zindexAni = anime({
             targets: '#B2_iframe_div',
             width: ['23%', '50%'],
             height: ['46%', '100%'],
             top: ['25%', '0%'],
-            right: ['14%', '0%'],
+            right: ['215px', '0px'],
             zIndex: {
                 value: [6, 99],
                 round: true
@@ -713,13 +919,15 @@
             easing: "easeInOutSine"
         })
 
-        document.querySelector('#B2_iframe_div').onclick = function () {
+        document.querySelector('#B2_iframe_scale').onclick = function () {
+
             B2zindexAni.play();
             ContainerAni.play();
             B2zindexAni.finished.then(() => {
                 B2zindexAni.reverse();
                 ContainerAni.reverse();
             })
+
             var img = document.getElementById('B2_iframe_scale').src;
             if (img.indexOf('scaleDown.png') != -1) {
                 document.getElementById('B2_iframe_scale').src = 'assets/imgs/scaleUp.png';
@@ -728,7 +936,70 @@
                 document.getElementById('B2_iframe_scale').src = 'assets/imgs/scaleDown.png';
             }
         }
-        //// Scale up after click B2_iframe_div ////
+        //// Scale up after click B2_iframe_scale ////
+
+        //// Slide in after click B2_iframe_div ////
+        const B2startAni = anime({
+            targets: '#B2_iframe_div',
+            width: ['23%', '23%'],
+            height: ['46%', '46%'],
+            top: ['25%', '25%'],
+            right: ['-410px', '215px'],
+            zIndex: {
+                value: [6, 6],
+                round: true
+            },
+            loop: false,
+            delay: 1200,
+            duration: 500,
+            autoplay: false,
+            easing: "easeInOutSine"
+        })
+        // B2_iframe_div can only click once //
+        document.querySelector('#B2_iframe_div').onclick = function () {
+            /*B2startAni.play();
+            SlideContainerAni.play();
+            SlideContainerAni.finished.then(() => {
+                anime.remove('#imgContainer');
+                var popup = document.getElementById("popup_slide");
+                popup.style.display = "none";
+            })
+            document.getElementById('B2_iframe_div').onclick = () => false;*/
+            C3startAni.play();
+            C2startAni.play();
+            C1startAni.play();
+            B3startAni.play();
+            B2startAni.play();
+            B1startAni.play();
+            A3startAni.play();
+            A2startAni.play();
+            A1startAni.play();
+            SlideContainerAni.play();
+            SlideContainerAni.finished.then(() => {
+                C3startAni.reverse();
+                C2startAni.reverse();
+                C1startAni.reverse();
+                B3startAni.reverse();
+                B2startAni.reverse();
+                B1startAni.reverse();
+                A3startAni.reverse();
+                A2startAni.reverse();
+                A1startAni.reverse();
+                SlideContainerAni.reverse();
+            })
+            /*var popup = document.getElementById("popup_slide");
+            popup.style.display = "none";*/
+            document.getElementById('C3_iframe_div').onclick = () => false;
+            document.getElementById('C2_iframe_div').onclick = () => false;
+            document.getElementById('C1_iframe_div').onclick = () => false;
+            document.getElementById('B3_iframe_div').onclick = () => false;
+            document.getElementById('B2_iframe_div').onclick = () => false;
+            document.getElementById('B1_iframe_div').onclick = () => false;
+            document.getElementById('A3_iframe_div').onclick = () => false;
+            document.getElementById('A2_iframe_div').onclick = () => false;
+            document.getElementById('A1_iframe_div').onclick = () => false;
+        }
+        //// Slide in after click B2_iframe_div ////
 
         //// Create the div which contain B3_iframe ////
         var B3_iframe_div = document.createElement('div');
@@ -749,30 +1020,16 @@
         var B3_iframe = document.createElement('iframe');
         B3_iframe.setAttribute('src', iframeSource_B3);
         B3_iframe.setAttribute('id', 'B3_iframe');
-        //A2_iframe.style.zIndex = 1;
         B3_iframe_div.appendChild(B3_iframe);
         //// Create the B3_iframe ////
 
-        //// Animation in the beginning B3_iframe_div ////
-        const B3startAni = anime({
-            targets: '#B3_iframe_div',
-            top: ['20%', '20%'],
-            right: ['-28%', '20%'],
-            loop: false,
-            delay: 2500,
-            duration: 500,
-            autoplay: true,
-            easing: "easeInOutSine"
-        })
-        //// Animation in the beginning B3_iframe_div ////
-
-        //// Scale up after click B3_iframe_div ////
+        //// Scale up after click B3_iframe_scale ////
         const B3zindexAni = anime({
             targets: '#B3_iframe_div',
             width: ['23%', '50%'],
             height: ['46%', '100%'],
             top: ['20%', '0%'],
-            right: ['20%', '0%'],
+            right: ['300px', '0px'],
             zIndex: {
                 value: [5, 99],
                 round: true
@@ -784,13 +1041,15 @@
             easing: "easeInOutSine"
         })
 
-        document.querySelector('#B3_iframe_div').onclick = function () {
+        document.querySelector('#B3_iframe_scale').onclick = function () {
+
             B3zindexAni.play();
             ContainerAni.play();
             B3zindexAni.finished.then(() => {
                 B3zindexAni.reverse();
                 ContainerAni.reverse();
             })
+
             var img = document.getElementById('B3_iframe_scale').src;
             if (img.indexOf('scaleDown.png') != -1) {
                 document.getElementById('B3_iframe_scale').src = 'assets/imgs/scaleUp.png';
@@ -799,7 +1058,70 @@
                 document.getElementById('B3_iframe_scale').src = 'assets/imgs/scaleDown.png';
             }
         }
-        //// Scale up after click B3_iframe_div ////
+        //// Scale up after click B3_iframe_scale ////
+
+        //// Slide in after click B3_iframe_div ////
+        const B3startAni = anime({
+            targets: '#B3_iframe_div',
+            width: ['23%', '23%'],
+            height: ['46%', '46%'],
+            top: ['20%', '20%'],
+            right: ['-410px', '300px'],
+            zIndex: {
+                value: [5, 5],
+                round: true
+            },
+            loop: false,
+            delay: 900,
+            duration: 500,
+            autoplay: false,
+            easing: "easeInOutSine"
+        })
+        // B3_iframe_div can only click once //
+        document.querySelector('#B3_iframe_div').onclick = function () {
+            /*B3startAni.play();
+            SlideContainerAni.play();
+            SlideContainerAni.finished.then(() => {
+                anime.remove('#imgContainer');
+                var popup = document.getElementById("popup_slide");
+                popup.style.display = "none";
+            })
+            document.getElementById('B3_iframe_div').onclick = () => false;*/
+            C3startAni.play();
+            C2startAni.play();
+            C1startAni.play();
+            B3startAni.play();
+            B2startAni.play();
+            B1startAni.play();
+            A3startAni.play();
+            A2startAni.play();
+            A1startAni.play();
+            SlideContainerAni.play();
+            SlideContainerAni.finished.then(() => {
+                C3startAni.reverse();
+                C2startAni.reverse();
+                C1startAni.reverse();
+                B3startAni.reverse();
+                B2startAni.reverse();
+                B1startAni.reverse();
+                A3startAni.reverse();
+                A2startAni.reverse();
+                A1startAni.reverse();
+                SlideContainerAni.reverse();
+            })
+            /*var popup = document.getElementById("popup_slide");
+            popup.style.display = "none";*/
+            document.getElementById('C3_iframe_div').onclick = () => false;
+            document.getElementById('C2_iframe_div').onclick = () => false;
+            document.getElementById('C1_iframe_div').onclick = () => false;
+            document.getElementById('B3_iframe_div').onclick = () => false;
+            document.getElementById('B2_iframe_div').onclick = () => false;
+            document.getElementById('B1_iframe_div').onclick = () => false;
+            document.getElementById('A3_iframe_div').onclick = () => false;
+            document.getElementById('A2_iframe_div').onclick = () => false;
+            document.getElementById('A1_iframe_div').onclick = () => false;
+        }
+        //// Slide in after click B3_iframe_div ////
 
         //// Create the div which contain C1_iframe ////
         var C1_iframe_div = document.createElement('div');
@@ -820,30 +1142,16 @@
         var C1_iframe = document.createElement('iframe');
         C1_iframe.setAttribute('src', iframeSource_C1);
         C1_iframe.setAttribute('id', 'C1_iframe');
-        //A2_iframe.style.zIndex = 1;
         C1_iframe_div.appendChild(C1_iframe);
         //// Create the C1_iframe ////
 
-        //// Animation in the beginning C1_iframe_div ////
-        const C1startAni = anime({
-            targets: '#C1_iframe_div',
-            top: ['15%', '15%'],
-            right: ['-28%', '18%'],
-            loop: false,
-            delay: 2000,
-            duration: 500,
-            autoplay: true,
-            easing: "easeInOutSine"
-        })
-        //// Animation in the beginning C1_iframe_div ////
-
-        //// Scale up after click C1_iframe_div ////
+        //// Scale up after click C1_iframe_scale ////
         const C1zindexAni = anime({
             targets: '#C1_iframe_div',
             width: ['23%', '50%'],
             height: ['46%', '100%'],
             top: ['15%', '0%'],
-            right: ['18%', '0%'],
+            right: ['250px', '0px'],
             zIndex: {
                 value: [4, 99],
                 round: true
@@ -855,13 +1163,15 @@
             easing: "easeInOutSine"
         })
 
-        document.querySelector('#C1_iframe_div').onclick = function () {
+        document.querySelector('#C1_iframe_scale').onclick = function () {
+
             C1zindexAni.play();
             ContainerAni.play();
             C1zindexAni.finished.then(() => {
                 C1zindexAni.reverse();
                 ContainerAni.reverse();
             })
+
             var img = document.getElementById('C1_iframe_scale').src;
             if (img.indexOf('scaleDown.png') != -1) {
                 document.getElementById('C1_iframe_scale').src = 'assets/imgs/scaleUp.png';
@@ -870,7 +1180,71 @@
                 document.getElementById('C1_iframe_scale').src = 'assets/imgs/scaleDown.png';
             }
         }
-        //// Scale up after click C1_iframe_div ////
+        //// Scale up after click C1_iframe_scale ////
+
+        //// Slide in after click C1_iframe_div ////
+        const C1startAni = anime({
+            targets: '#C1_iframe_div',
+            width: ['23%', '23%'],
+            height: ['46%', '46%'],
+            top: ['15%', '15%'],
+            right: ['-410', '250px'],
+            zIndex: {
+                value: [4, 4],
+                round: true
+            },
+            loop: false,
+            delay: 600,
+            duration: 500,
+            autoplay: false,
+            easing: "easeInOutSine"
+        })
+        // C1_iframe_div can only click once //
+        document.querySelector('#C1_iframe_div').onclick = function () {
+            /*C1startAni.play();
+            SlideContainerAni.play();
+            SlideContainerAni.finished.then(() => {
+                anime.remove('#imgContainer');
+                //anime.remove('#C1_iframe_div');
+                var popup = document.getElementById("popup_slide");
+                popup.style.display = "none";
+            })
+            document.getElementById('C1_iframe_div').onclick = () => false;*/
+            C3startAni.play();
+            C2startAni.play();
+            C1startAni.play();
+            B3startAni.play();
+            B2startAni.play();
+            B1startAni.play();
+            A3startAni.play();
+            A2startAni.play();
+            A1startAni.play();
+            SlideContainerAni.play();
+            SlideContainerAni.finished.then(() => {
+                C3startAni.reverse();
+                C2startAni.reverse();
+                C1startAni.reverse();
+                B3startAni.reverse();
+                B2startAni.reverse();
+                B1startAni.reverse();
+                A3startAni.reverse();
+                A2startAni.reverse();
+                A1startAni.reverse();
+                SlideContainerAni.reverse();
+            })
+            /*var popup = document.getElementById("popup_slide");
+            popup.style.display = "none";*/
+            document.getElementById('C3_iframe_div').onclick = () => false;
+            document.getElementById('C2_iframe_div').onclick = () => false;
+            document.getElementById('C1_iframe_div').onclick = () => false;
+            document.getElementById('B3_iframe_div').onclick = () => false;
+            document.getElementById('B2_iframe_div').onclick = () => false;
+            document.getElementById('B1_iframe_div').onclick = () => false;
+            document.getElementById('A3_iframe_div').onclick = () => false;
+            document.getElementById('A2_iframe_div').onclick = () => false;
+            document.getElementById('A1_iframe_div').onclick = () => false;
+        }
+        //// Slide in after click C1_iframe_div ////
 
         //// Create the div which contain C2_iframe ////
         var C2_iframe_div = document.createElement('div');
@@ -891,30 +1265,16 @@
         var C2_iframe = document.createElement('iframe');
         C2_iframe.setAttribute('src', iframeSource_C2);
         C2_iframe.setAttribute('id', 'C2_iframe');
-        //A2_iframe.style.zIndex = 1;
         C2_iframe_div.appendChild(C2_iframe);
         //// Create the C2_iframe ////
 
-        //// Animation in the beginning C2_iframe_div ////
-        const C2startAni = anime({
-            targets: '#C2_iframe_div',
-            top: ['10%', '10%'],
-            right: ['-28%', '11%'],
-            loop: false,
-            delay: 1500,
-            duration: 500,
-            autoplay: true,
-            easing: "easeInOutSine"
-        })
-        //// Animation in the beginning C2_iframe_div ////
-
-        //// Scale up after click C2_iframe_div ////
+        //// Scale up after click C2_iframe_scale ////
         const C2zindexAni = anime({
             targets: '#C2_iframe_div',
             width: ['23%', '50%'],
             height: ['46%', '100%'],
             top: ['10%', '0%'],
-            right: ['11%', '0%'],
+            right: ['100px', '0px'],
             zIndex: {
                 value: [3, 99],
                 round: true
@@ -926,13 +1286,15 @@
             easing: "easeInOutSine"
         })
 
-        document.querySelector('#C2_iframe_div').onclick = function () {
+        document.querySelector('#C2_iframe_scale').onclick = function () {
+
             C2zindexAni.play();
             ContainerAni.play();
             C2zindexAni.finished.then(() => {
                 C2zindexAni.reverse();
                 ContainerAni.reverse();
             })
+
             var img = document.getElementById('C2_iframe_scale').src;
             if (img.indexOf('scaleDown.png') != -1) {
                 document.getElementById('C2_iframe_scale').src = 'assets/imgs/scaleUp.png';
@@ -941,7 +1303,71 @@
                 document.getElementById('C2_iframe_scale').src = 'assets/imgs/scaleDown.png';
             }
         }
-        //// Scale up after click C2_iframe_div ////
+        //// Scale up after click C2_iframe_scale ////
+
+        //// Slide in after click C2_iframe_div ////
+        const C2startAni = anime({
+            targets: '#C2_iframe_div',
+            width: ['23%', '23%'],
+            height: ['46%', '46%'],
+            top: ['10%', '10%'],
+            right: ['-410px', '100px'],
+            zIndex: {
+                value: [3, 3],
+                round: true
+            },
+            loop: false,
+            delay: 300,
+            duration: 500,
+            autoplay: false,
+            easing: "easeInOutSine"
+        })
+        // C2_iframe_div can only click once //
+        document.querySelector('#C2_iframe_div').onclick = function () {
+            /*C2startAni.play();
+            SlideContainerAni.play();
+            SlideContainerAni.finished.then(() => {
+                anime.remove('#imgContainer');
+                //anime.remove('#C2_iframe_div');
+                //C2startAni.reverse();
+                var popup = document.getElementById("popup_slide");
+                popup.style.display = "none";
+            })*/
+            C3startAni.play();
+            C2startAni.play();
+            C1startAni.play();
+            B3startAni.play();
+            B2startAni.play();
+            B1startAni.play();
+            A3startAni.play();
+            A2startAni.play();
+            A1startAni.play();
+            SlideContainerAni.play();
+            SlideContainerAni.finished.then(() => {
+                C3startAni.reverse();
+                C2startAni.reverse();
+                C1startAni.reverse();
+                B3startAni.reverse();
+                B2startAni.reverse();
+                B1startAni.reverse();
+                A3startAni.reverse();
+                A2startAni.reverse();
+                A1startAni.reverse();
+                SlideContainerAni.reverse();
+            })
+            /*var popup = document.getElementById("popup_slide");
+            popup.style.display = "none";*/
+            document.getElementById('C3_iframe_div').onclick = () => false;
+            document.getElementById('C2_iframe_div').onclick = () => false;
+            document.getElementById('C1_iframe_div').onclick = () => false;
+            document.getElementById('B3_iframe_div').onclick = () => false;
+            document.getElementById('B2_iframe_div').onclick = () => false;
+            document.getElementById('B1_iframe_div').onclick = () => false;
+            document.getElementById('A3_iframe_div').onclick = () => false;
+            document.getElementById('A2_iframe_div').onclick = () => false;
+            document.getElementById('A1_iframe_div').onclick = () => false;
+        }
+        //// Slide in after click C2_iframe_div ////
 
         //// Create the div which contain C3_iframe ////
         var C3_iframe_div = document.createElement('div');
@@ -962,30 +1388,16 @@
         var C3_iframe = document.createElement('iframe');
         C3_iframe.setAttribute('src', iframeSource_C3);
         C3_iframe.setAttribute('id', 'C3_iframe');
-        //A2_iframe.style.zIndex = 1;
         C3_iframe_div.appendChild(C3_iframe);
         //// Create the C3_iframe ////
 
-        //// Animation in the beginning C3_iframe_div ////
-        const C3startAni = anime({
-            targets: '#C3_iframe_div',
-            top: ['5%', '5%'],
-            right: ['-28%', '6%'],
-            loop: false,
-            delay: 1000,
-            duration: 500,
-            autoplay: true,
-            easing: "easeInOutSine"
-        })
-        //// Animation in the beginning C3_iframe_div ////
-
-        //// Scale up after click C3_iframe_div ////
+        //// Scale up after click C3_iframe_scale ////
         const C3zindexAni = anime({
             targets: '#C3_iframe_div',
             width: ['23%', '50%'],
             height: ['46%', '100%'],
             top: ['5%', '0%'],
-            right: ['6%', '0%'],
+            right: ['50px', '0px'],
             zIndex: {
                 value: [2, 99],
                 round: true
@@ -997,13 +1409,15 @@
             easing: "easeInOutSine"
         })
 
-        document.querySelector('#C3_iframe_div').onclick = function () {
+        document.querySelector('#C3_iframe_scale').onclick = function () {
+
             C3zindexAni.play();
             ContainerAni.play();
             C3zindexAni.finished.then(() => {
                 C3zindexAni.reverse();
                 ContainerAni.reverse();
             })
+
             var img = document.getElementById('C3_iframe_scale').src;
             if (img.indexOf('scaleDown.png') != -1) {
                 document.getElementById('C3_iframe_scale').src = 'assets/imgs/scaleUp.png';
@@ -1012,9 +1426,93 @@
                 document.getElementById('C3_iframe_scale').src = 'assets/imgs/scaleDown.png';
             }
         }
-        //// Scale up after click C3_iframe_div ////
+        //// Scale up after click C3_iframe_scale ////
 
+        //// Slide in after click C3_iframe_div ////
+        const C3startAni = anime({
+            targets: '#C3_iframe_div',
+            width: ['23%', '23%'],
+            height: ['46%', '46%'],
+            top: ['5%', '5%'],
+            right: ['-410px', '50px'],
+            zIndex: {
+                value: [2, 2],
+                round: true
+            },
+            loop: false,
+            duration: 500,
+            autoplay: false,
+            easing: "easeInOutSine"
+        })
+        // C3_iframe_div can only click once //
+        document.querySelector('#C3_iframe_div').onclick = function () {
+            C3startAni.play();
+            C2startAni.play();
+            C1startAni.play();
+            B3startAni.play();
+            B2startAni.play();
+            B1startAni.play();
+            A3startAni.play();
+            A2startAni.play();
+            A1startAni.play();
+            SlideContainerAni.play();
+            SlideContainerAni.finished.then(() => {
+                C3startAni.reverse();
+                C2startAni.reverse();
+                C1startAni.reverse();
+                B3startAni.reverse();
+                B2startAni.reverse();
+                B1startAni.reverse();
+                A3startAni.reverse();
+                A2startAni.reverse();
+                A1startAni.reverse();
+                SlideContainerAni.reverse();
+            })
+            /*var popup = document.getElementById("popup_slide");
+            popup.style.display = "none";*/
+            document.getElementById('C3_iframe_div').onclick = () => false;
+            document.getElementById('C2_iframe_div').onclick = () => false;
+            document.getElementById('C1_iframe_div').onclick = () => false;
+            document.getElementById('B3_iframe_div').onclick = () => false;
+            document.getElementById('B2_iframe_div').onclick = () => false;
+            document.getElementById('B1_iframe_div').onclick = () => false;
+            document.getElementById('A3_iframe_div').onclick = () => false;
+            document.getElementById('A2_iframe_div').onclick = () => false;
+            document.getElementById('A1_iframe_div').onclick = () => false;
+        }
+        //// Slide in after click C3_iframe_div ////
 
+        //// toggle all element slide in-out ////
+        document.querySelector('#bt1').onclick = function () {
+            //disable the click event 
+            document.getElementById('bt1').style.pointerEvents = 'none';
+
+            C3startAni.play();
+            C2startAni.play();
+            C1startAni.play();
+            B3startAni.play();
+            B2startAni.play();
+            B1startAni.play();
+            A3startAni.play();
+            A2startAni.play();
+            A1startAni.play();
+            SlideContainerAni.play();
+            SlideContainerAni.finished.then(() => {
+                C3startAni.reverse();
+                C2startAni.reverse();
+                C1startAni.reverse();
+                B3startAni.reverse();
+                B2startAni.reverse();
+                B1startAni.reverse();
+                A3startAni.reverse();
+                A2startAni.reverse();
+                A1startAni.reverse();
+                SlideContainerAni.reverse();
+                //enable the click event 
+                document.getElementById('bt1').style.pointerEvents = 'auto';
+            })
+        }
+        //// toggle all element slide in-out ////
 
         //// Receive postMessege from iframe ////
         // addEventListener support for IE8
@@ -1093,6 +1591,20 @@
             }
         });
         //// Receive postMessege from iframe ////
+
+        //// js media query test////
+        /*function RPFunction(x) {
+            if (x.matches) { // If media query matches
+                document.querySelector('#C3_iframe_div').style.display = "none";
+            } else {
+                document.querySelector('#C3_iframe_div').style.display = "block";
+            }
+        }
+
+        var x = window.matchMedia("(max-width: 700px)")
+        RPFunction(x) // Call listener function at run time
+        x.addListener(RPFunction) // Attach listener function on state changes*/
+        //// js media query test////
 
     </script>
 

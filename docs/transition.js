@@ -47,8 +47,26 @@ function close_share() {
 
 // Close share element.
 function download_pdf() {
+    function html2canvasAndMergeAndDownload(canvas) {
+        getCanvasBlob(canvas)
+            .then(async function (blob) {
+                let buffer = await blob.arrayBuffer();
+                let resultPdf = await merge(urls, buffer);
+                let pdfBytes = await resultPdf.save();
+                download(pdfBytes, "merged.pdf", "application/pdf");
+            });
+    }
+
     var popup_share = document.getElementById("popup_share");
     popup_share.style.display = "none";
+
+    let urls = MainData.getPdfUrls();
+    let imgContainer = document.getElementById("imgContainer");
+    let options = {
+        logging: false,
+        scale: 1
+    };
+    html2canvas(imgContainer).then(html2canvasAndMergeAndDownload, options);
 }
 
 // Close share element.

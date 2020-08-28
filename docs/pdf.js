@@ -35,7 +35,7 @@ function generatePageArray(pageCount) {
  *
  * @returns {PDFDocument}
  */
-async function merge(urls, imgArrayBuffer) {
+async function merge(urls, coverPdfUrl, imgArrayBuffer) {
     let pdfDocs = [];
     if (!(!urls || !Array.isArray(urls) || urls.length == 0)) {
         for (let i = 0; i < urls.length; i++) {
@@ -48,24 +48,31 @@ async function merge(urls, imgArrayBuffer) {
         }
     }
 
-    let resultPdf = await PDFDocument.create();
     // Make cover
+    let resultPdf = await PDFDocument.create();
+    const page = resultPdf.addPage(PageSizes.A4);
+    if (coverPdfUrl) {
+        let bytes = await fetch(coverPdfUrl).then(res => res.arrayBuffer());
+        const [embeddedPage] = await resultPdf.embedPdf(bytes, [0]);
+        page.drawPage(embeddedPage);
+    }
+
     if (imgArrayBuffer) {
         const img = await resultPdf.embedPng(imgArrayBuffer);
-        const page = resultPdf.addPage(PageSizes.A4);
 
         // Scale to fit
-        let scaleW = page.getWidth() / img.width;
+        let interval = 38;
+        let scaleW = (page.getWidth() - (interval * 2)) / img.width;
         let scaleH = page.getHeight() / img.height;
-        const dimsW = img.scale(scaleW);
-        const dimsH = img.scale(scaleH);
+        let scale = Math.min(scaleW, scaleH);
+        const dims = img.scale(scale);
 
         // Draw the image in the center of the page
         page.drawImage(img, {
-            x: page.getWidth() / 2 - dimsW.width / 2,
-            y: page.getHeight() / 2 - dimsH.height / 2,
-            width: dimsW.width,
-            height: dimsH.height,
+            x: page.getWidth() / 2 - dims.width / 2,
+            y: interval,
+            width: dims.width,
+            height: dims.height,
         });
     }
 

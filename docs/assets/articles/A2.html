@@ -106,7 +106,9 @@
 		var sendMessage = function (msg) {
 			var data = {
 				'id': 'a2',
-				'value': msg
+				'value': msg,
+				'kind': 1,
+				'file': 'A.pdf'
 			}
 			window.parent.postMessage(data, '*');
 		};

@@ -78,7 +78,9 @@
 		var sendMessage = function (msg) {
 			var data = {
 				'id': 'c2',
-				'value': msg
+				'value': msg,
+				'kind': 3,
+				'file': 'C.pdf'
 			}
 			window.parent.postMessage(data, '*');
 		};

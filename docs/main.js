@@ -5,7 +5,14 @@ let MainData = {
         let filtered = Object.values(this.pdf)
             .filter(x => x.value > 0);
 
-        return filtered.map(x => `filehost/${x.id.toUpperCase()}.pdf`);
+        let result = [];
+        filtered.forEach(element => {
+            result.push(element.file);
+        });
+        result = [...new Set(result)];
+        result = result.sort();
+
+        return result.map(x => `filehost/${x}`);
     }
 };
 
@@ -1383,7 +1390,7 @@ let MainData = {
     }
     // Listen to message from child window
     bindEvent(window, 'message', function (e) {
-        if (e.data.id) {
+        if (e.data) {
             MainData.pdf[e.data.id] = e.data;
         }
         switch (e.data.id) {

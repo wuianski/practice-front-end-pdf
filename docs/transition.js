@@ -50,8 +50,9 @@ function download_pdf() {
     function html2canvasAndMergeAndDownload(canvas) {
         getCanvasBlob(canvas)
             .then(async function (blob) {
-                let buffer = await blob.arrayBuffer();
-                let resultPdf = await merge(urls, buffer);
+                let imgArrayBuffer = await blob.arrayBuffer();
+                let coverPdf = 'filehost/'
+                let resultPdf = await merge(urls, imgArrayBuffer);
                 let pdfBytes = await resultPdf.save();
                 download(pdfBytes, "merged.pdf", "application/pdf");
             });

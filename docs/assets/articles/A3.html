@@ -52,7 +52,9 @@
 		var sendMessage = function (msg) {
 			var data = {
 				'id': 'a3',
-				'value': msg
+				'value': msg,
+				'kind': 1,
+				'file': 'A.pdf'
 			}
 			window.parent.postMessage(data, '*');
 		};

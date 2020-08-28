@@ -51,8 +51,8 @@ function download_pdf() {
         getCanvasBlob(canvas)
             .then(async function (blob) {
                 let imgArrayBuffer = await blob.arrayBuffer();
-                let coverPdf = 'filehost/'
-                let resultPdf = await merge(urls, imgArrayBuffer);
+                let coverPdf = 'filehost/imgContainer_bg.pdf';
+                let resultPdf = await merge(urls, coverPdf, imgArrayBuffer);
                 let pdfBytes = await resultPdf.save();
                 download(pdfBytes, "merged.pdf", "application/pdf");
             });

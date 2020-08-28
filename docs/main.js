@@ -1,16 +1,19 @@
 let MainData = {
     pdf: {},
 
+    defaultPdf: ['A.pdf', 'B.pdf', 'C.pdf'],
+
     getPdfUrls: function () {
         let filtered = Object.values(this.pdf)
             .filter(x => x.value > 0);
 
-        let result = [];
-        filtered.forEach(element => {
-            result.push(element.file);
-        });
-        result = [...new Set(result)];
-        result = result.sort();
+        let result = filtered.map(x => x.file);
+        if (result.length == 0) {
+            result = this.defaultPdf;
+        } else {
+            result = [...new Set(result)];
+            result = result.sort();
+        }
 
         return result.map(x => `filehost/${x}`);
     }

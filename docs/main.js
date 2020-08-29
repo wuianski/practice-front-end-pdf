@@ -1177,6 +1177,8 @@ let MainData = {
      * Trigger all frames slide in-out after click #bt1 
      */
     document.querySelector('#bt1').onclick = function () {
+        //disable the click event
+        document.getElementById('bt1').style.pointerEvents = 'none';
         A1startAni.play();
         A2startAni.play();
         A3startAni.play();
@@ -1198,6 +1200,8 @@ let MainData = {
             C2startAni.reverse();
             C3startAni.reverse();
             SlideContainerAni.reverse();
+            //re-enable the click event
+            document.getElementById('bt1').style.pointerEvents = 'auto';
         })
 
     }

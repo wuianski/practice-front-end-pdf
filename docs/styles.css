@@ -167,11 +167,12 @@ body {
     display: block;
     position: absolute;
     border: 1px solid #000;
-    /*width: 600px;
-    height: 600px;*/
     margin-right: -15px;
     clip-path:inset(0px);
-    min-width: 700px;
+    min-width: 500px;
+    width:35%;
+    height:75%;
+    top:13%;
 }
 #img0{
     height: 50px;
@@ -179,87 +180,114 @@ body {
     bottom: 15px;
     left: 15px;
 }
+
 #A1_iframe_div{
     position: absolute;
     background-color:#eb5514;
     border: solid 1px #000000;
     padding:15px 0px 15px 15px;
-    min-width: 450px;
+    min-width: 380px;
     cursor: pointer;
-    /*right: -28%;*/
+    width:23%;
+    height:46%;
+    top:45%;
 }
 #A2_iframe_div{
     position: absolute;
     background-color:#ee7744;
     border: solid 1px #000000;
     padding:15px 0px 15px 15px;
-    min-width: 450px;
+    min-width: 380px;
     cursor: pointer;
+    width:23%;
+    height:46%;
+    top:40%;
 }
 #A3_iframe_div{
     position: absolute;
     background-color:#ee7744;
     border: solid 1px #000000;
     padding:15px 0px 15px 15px;
-    min-width: 450px;
+    min-width: 380px;
     cursor: pointer;
+    width:23%;
+    height:46%;
+    top:35%;
 }
 #B1_iframe_div{
     position: absolute;
     background-color:#fdd008;
     border: solid 1px #000000;
     padding:15px 0px 15px 15px;
-    min-width: 450px;
+    min-width: 380px;
     cursor: pointer;
+    width:23%;
+    height:46%;
+    top:30%;
 }
 #B2_iframe_div{
     position: absolute;
     background-color:#fee67c;
     border: solid 1px #000000;
     padding:15px 0px 15px 15px;
-    min-width: 450px;
+    min-width: 380px;
     cursor: pointer;
+    width:23%;
+    height:46%;
+    top:25%;
 }
 #B3_iframe_div{
     position: absolute;
     background-color:#fef0a9;
     border: solid 1px #000000;
     padding:15px 0px 15px 15px;
-    min-width: 450px;
+    min-width: 380px;
     cursor: pointer;
+    width:23%;
+    height:46%;
+    top:20%;
 }
 #C1_iframe_div{
     position: absolute;
     background-color:#86c0ca;
     border: solid 1px #000000;
     padding:15px 0px 15px 15px;
-    min-width: 450px;
+    min-width: 380px;
     cursor: pointer;
+    width:23%;
+    height:46%;
+    top:15%;
 }
 #C2_iframe_div{
     position: absolute;
     background-color:#4c7f94;
     border: solid 1px #000000;
     padding:15px 0px 15px 15px;
-    min-width: 450px;
+    min-width: 380px;
     cursor: pointer;
+    width:23%;
+    height:46%;
+    top:10%;
 }
 #C3_iframe_div{
     position: absolute;
     background-color:#1a5875;
     border: solid 1px #000000;
     padding:15px 0px 15px 15px;
-    min-width: 450px;
+    min-width: 380px;
     cursor: pointer;
+    width:23%;
+    height:46%;
+    top:5%;
 }
 #A1_iframe_title,#A2_iframe_title,#A3_iframe_title,#B1_iframe_title,#B2_iframe_title,#B3_iframe_title,#C1_iframe_title,#C2_iframe_title,#C3_iframe_title{
-    height:50px;
+    height:38px;
 }
 #A1_iframe_scale,#A2_iframe_scale,#A3_iframe_scale,#B1_iframe_scale,#B2_iframe_scale,#B3_iframe_scale,#C1_iframe_scale,#C2_iframe_scale,#C3_iframe_scale{
     height:20px;
     position: absolute;
     right: 15px;
-    z-index: 99;
+    /*z-index: 99;*/
 }
 #A1_iframe,#A2_iframe,#A3_iframe,#B1_iframe,#B2_iframe,#B3_iframe,#C1_iframe,#C2_iframe,#C3_iframe{
     border: solid 0px #000000;
@@ -330,6 +358,17 @@ body {
     #close_btn{
         top: 60px;
     }
+    /*#A1_iframe_div{
+    position: absolute;
+    background-color:#eb5514;
+    border: solid 1px #000000;
+    padding:15px 0px 15px 15px;
+    cursor: pointer;
+    width:73%;
+    height:6%;
+    top:45%;
+    left:93%;
+    }*/
 }
 @media screen and (min-width: 668px) and (max-width: 800px){
     .slides_container{
@@ -363,7 +402,14 @@ body {
         top: 60px;
     }
     /*#A1_iframe_div{
-        left: 5px ;
+    position: absolute;
+    background-color:#eb5514;
+    border: solid 1px #000000;
+    padding:15px 0px 15px 15px;
+    cursor: pointer;
+    width:73%;
+    height:6%;
+    top:45%;
+    left:93%;
     }*/
-
 }

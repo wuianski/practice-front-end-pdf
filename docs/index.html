@@ -79,8 +79,29 @@
     </div>
 
     <script src="main.js"></script>
+    <script src="mobile.js"></script>
     <script src="pdf.js"></script>
     <script src="transition.js"></script>
+    <script>
+        /* js media query test */
+        function RPFunction(x) {
+
+            if (x.matches) { // If media query matches
+                var A1_iframe_div = document.querySelector('#A1_iframe_div');
+                var A1_iframe_div_m = document.querySelector('#A1_iframe_div_m');
+                console.log(A1_iframe_div_m);
+                document.body.replaceChild(A1_iframe_div_m, A1_iframe_div);
+                document.querySelector('#imgContainer').style.display = "none";
+            } else {
+                document.querySelector('#imgContainer').style.display = "block";
+            }
+        }
+
+        var x = window.matchMedia("(max-width: 700px)")
+        RPFunction(x) // Call listener function at run time
+        x.addListener(RPFunction) // Attach listener function on state changes
+        /* js media query test */
+    </script>
 </body>
 
 </html>

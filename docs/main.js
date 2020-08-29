@@ -1299,13 +1299,14 @@ let MainData = {
 
     function checkZ_index(id) {
         var class_elements = document.getElementsByClassName("iframe_div");
+        var maxi_zIndex_num = 10;
         for (var i = 0, len = class_elements.length; i < len; i++) {
             // elements[i].style ...
             var id_element = document.getElementById(id);
             //console.log(`click element ${id} z-index:`, id_element.style.zIndex);
             //console.log(`click class_index ${class_elements[i].id} z-index:`, class_elements[i].style.zIndex);
-            if (id_element.style.zIndex < 10) {
-                id_element.style.zIndex = 10;
+            if (id_element.style.zIndex < maxi_zIndex_num) {
+                id_element.style.zIndex = maxi_zIndex_num;
             } else if (class_elements[i].id != id) {
                 class_elements[i].style.zIndex = id_element.style.zIndex - i;
                 console.log(`click class_index ${class_elements[i].id} z-index:`, class_elements[i].style.zIndex);

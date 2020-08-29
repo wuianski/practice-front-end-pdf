@@ -35,7 +35,7 @@ let MainData = {
     /* Scale up imgContainer */
     const ContainerAni = anime({
         targets: '#imgContainer',
-        width: ['35%', '50%'],//from this real default value to 0%
+        width: ['35%', '49%'],//from this real default value to 0%
         height: ['75%', '100%'],//from this real default value to 0%
         top: ['13%', '0%'],//from this real default value to 0%
         left: ['8%', '0%'],//from this real default value to 0%
@@ -377,10 +377,10 @@ let MainData = {
         top: ['45%', '0%'],//from this real default value to 0%
         right: ['25%', '0%'],//from this real default value to 0%
         //zIndex: 99,
-        zIndex: {
-            value: [9, 99],//from this real default value to 99
+        /*zIndex: {
+            value: 99,//from this real default value to 99
             round: true
-        },
+        },*/
         loop: false,
         delay: 200,
         duration: 500,
@@ -413,7 +413,11 @@ let MainData = {
         loop: false,
         duration: 0,
         autoplay: true,
-        easing: "easeInOutSine"
+        easing: "easeInOutSine",
+        zIndex: {
+            value: [9, 9],//this is a real default value
+            round: true
+        },
     })
     /* first setting of A1_iframe_div */
 
@@ -425,10 +429,10 @@ let MainData = {
         top: '45%',//this is a real default value
         right: '25%',//this is a real default value
         //left: '60%',
-        zIndex: {
+        /*zIndex: {
             value: [9, 9],//this is a real default value
             round: true
-        },
+        },*/
         loop: false,
         delay: 1800,
         duration: 500,
@@ -470,10 +474,10 @@ let MainData = {
         top: ['40%', '0%'],//from this real default value to 0%
         right: ['15%', '0%'],//from this real default value to 0%
         //zIndex: 99,
-        zIndex: {
-            value: [8, 99],//from this real default value to 99
+        /*zIndex: {
+            value: 99,//from this real default value to 99
             round: true
-        },
+        },*/
         loop: false,
         delay: 200,
         duration: 500,
@@ -506,7 +510,11 @@ let MainData = {
         loop: false,
         duration: 0,
         autoplay: true,
-        easing: "easeInOutSine"
+        easing: "easeInOutSine",
+        zIndex: {
+            value: [8, 8],//this is a real default value
+            round: true
+        },
     })
     /* first setting of A2_iframe_div */
 
@@ -518,10 +526,10 @@ let MainData = {
         top: '40%',//this is a real default value
         right: '15%',//this is a real default value
         //left: '60%',
-        zIndex: {
+        /*zIndex: {
             value: [8, 8],//this is a real default value
             round: true
-        },
+        },*/
         loop: false,
         delay: 1600,
         duration: 500,
@@ -563,10 +571,10 @@ let MainData = {
         top: ['35%', '0%'],//from this real default value to 0%
         right: ['5%', '0%'],//from this real default value to 0%
         //zIndex: 99,
-        zIndex: {
-            value: [7, 99],//from this real default value to 99
+        /*zIndex: {
+            value: 99,//from this real default value to 99
             round: true
-        },
+        },*/
         loop: false,
         delay: 200,
         duration: 500,
@@ -599,7 +607,11 @@ let MainData = {
         loop: false,
         duration: 0,
         autoplay: true,
-        easing: "easeInOutSine"
+        easing: "easeInOutSine",
+        zIndex: {
+            value: [7, 7],//this is a real default value
+            round: true
+        },
     })
     /* first setting of A3_iframe_div */
 
@@ -611,10 +623,10 @@ let MainData = {
         top: '35%',//this is a real default value
         right: '5%',//this is a real default value
         //left: '60%',
-        zIndex: {
+        /*zIndex: {
             value: [7, 7],//this is a real default value
             round: true
-        },
+        },*/
         loop: false,
         delay: 1400,
         duration: 500,
@@ -656,10 +668,10 @@ let MainData = {
         top: ['30%', '0%'],//from this real default value to 0%
         right: ['10%', '0%'],//from this real default value to 0%
         //zIndex: 99,
-        zIndex: {
-            value: [6, 99],//from this real default value to 99
+        /*zIndex: {
+            value: 99,//from this real default value to 99
             round: true
-        },
+        },*/
         loop: false,
         delay: 200,
         duration: 500,
@@ -692,7 +704,11 @@ let MainData = {
         loop: false,
         duration: 0,
         autoplay: true,
-        easing: "easeInOutSine"
+        easing: "easeInOutSine",
+        zIndex: {
+            value: [6, 6],//this is a real default value
+            round: true
+        },
     })
     /* first setting of B1_iframe_div */
 
@@ -704,10 +720,10 @@ let MainData = {
         top: '30%',//this is a real default value
         right: '10%',//this is a real default value
         //left: '60%',
-        zIndex: {
+        /*zIndex: {
             value: [6, 6],//this is a real default value
             round: true
-        },
+        },*/
         loop: false,
         delay: 1200,
         duration: 500,
@@ -749,10 +765,10 @@ let MainData = {
         top: ['25%', '0%'],//from this real default value to 0%
         right: ['12%', '0%'],//from this real default value to 0%
         //zIndex: 99,
-        zIndex: {
-            value: [5, 99],//from this real default value to 99
+        /*zIndex: {
+            value: 99,//from this real default value to 99
             round: true
-        },
+        },*/
         loop: false,
         delay: 200,
         duration: 500,
@@ -785,7 +801,11 @@ let MainData = {
         loop: false,
         duration: 0,
         autoplay: true,
-        easing: "easeInOutSine"
+        easing: "easeInOutSine",
+        zIndex: {
+            value: [5, 5],//this is a real default value
+            round: true
+        },
     })
     /* first setting of B2_iframe_div */
 
@@ -797,10 +817,10 @@ let MainData = {
         top: '25%',//this is a real default value
         right: '12%',//this is a real default value
         //left: '60%',
-        zIndex: {
+        /*zIndex: {
             value: [5, 5],//this is a real default value
             round: true
-        },
+        },*/
         loop: false,
         delay: 1000,
         duration: 500,
@@ -842,10 +862,10 @@ let MainData = {
         top: ['20%', '0%'],//from this real default value to 0%
         right: ['20%', '0%'],//from this real default value to 0%
         //zIndex: 99,
-        zIndex: {
-            value: [4, 99],//from this real default value to 99
+        /*zIndex: {
+            value: 99,//from this real default value to 99
             round: true
-        },
+        },*/
         loop: false,
         delay: 200,
         duration: 500,
@@ -878,7 +898,11 @@ let MainData = {
         loop: false,
         duration: 0,
         autoplay: true,
-        easing: "easeInOutSine"
+        easing: "easeInOutSine",
+        zIndex: {
+            value: [4, 4],//this is a real default value
+            round: true
+        },
     })
     /* first setting of B3_iframe_div */
 
@@ -890,10 +914,10 @@ let MainData = {
         top: '20%',//this is a real default value
         right: '20%',//this is a real default value
         //left: '60%',
-        zIndex: {
+        /*zIndex: {
             value: [4, 4],//this is a real default value
             round: true
-        },
+        },*/
         loop: false,
         delay: 800,
         duration: 500,
@@ -935,10 +959,10 @@ let MainData = {
         top: ['15%', '0%'],//from this real default value to 0%
         right: ['15%', '0%'],//from this real default value to 0%
         //zIndex: 99,
-        zIndex: {
-            value: [3, 99],//from this real default value to 99
+        /*zIndex: {
+            value: 99,//from this real default value to 99
             round: true
-        },
+        },*/
         loop: false,
         delay: 200,
         duration: 500,
@@ -971,7 +995,11 @@ let MainData = {
         loop: false,
         duration: 0,
         autoplay: true,
-        easing: "easeInOutSine"
+        easing: "easeInOutSine",
+        zIndex: {
+            value: [3, 3],//this is a real default value
+            round: true
+        },
     })
     /* first setting of C1_iframe_div */
 
@@ -983,10 +1011,10 @@ let MainData = {
         top: '15%',//this is a real default value
         right: '15%',//this is a real default value
         //left: '60%',
-        zIndex: {
+        /*zIndex: {
             value: [3, 3],//this is a real default value
             round: true
-        },
+        },*/
         loop: false,
         delay: 600,
         duration: 500,
@@ -1028,10 +1056,10 @@ let MainData = {
         top: ['10%', '0%'],//from this real default value to 0%
         right: ['6%', '0%'],//from this real default value to 0%
         //zIndex: 99,
-        zIndex: {
-            value: [2, 99],//from this real default value to 99
+        /*zIndex: {
+            value: 99,//from this real default value to 99
             round: true
-        },
+        },*/
         loop: false,
         delay: 200,
         duration: 500,
@@ -1064,7 +1092,11 @@ let MainData = {
         loop: false,
         duration: 0,
         autoplay: true,
-        easing: "easeInOutSine"
+        easing: "easeInOutSine",
+        zIndex: {
+            value: [2, 2],//this is a real default value
+            round: true
+        },
     })
     /* first setting of C2_iframe_div */
 
@@ -1076,10 +1108,10 @@ let MainData = {
         top: '10%',//this is a real default value
         right: '6%',//this is a real default value
         //left: '60%',
-        zIndex: {
+        /*zIndex: {
             value: [2, 2],//this is a real default value
             round: true
-        },
+        },*/
         loop: false,
         delay: 400,
         duration: 500,
@@ -1121,10 +1153,10 @@ let MainData = {
         top: ['5%', '0%'],//from this real default value to 0%
         right: ['3%', '0%'],//from this real default value to 0%
         //zIndex: 99,
-        zIndex: {
-            value: [1, 99],//from this real default value to 99
+        /*zIndex: {
+            value: 99,//from this real default value to 99
             round: true
-        },
+        },*/
         loop: false,
         delay: 200,
         duration: 500,
@@ -1157,7 +1189,11 @@ let MainData = {
         loop: false,
         duration: 0,
         autoplay: true,
-        easing: "easeInOutSine"
+        easing: "easeInOutSine",
+        zIndex: {
+            value: [1, 1],//this is a real default value
+            round: true
+        },
     })
     /* first setting of C3_iframe_div */
 
@@ -1169,10 +1205,10 @@ let MainData = {
         top: '5%',//this is a real default value
         right: '3%',//this is a real default value
         //left: '60%',
-        zIndex: {
+        /*zIndex: {
             value: [1, 1],//this is a real default value
             round: true
-        },
+        },*/
         loop: false,
         delay: 200,
         duration: 500,
@@ -1302,6 +1338,9 @@ let MainData = {
     });
     /* Receive postMessage from iframe */
 
+    /*
+     * Change iframe's z-index by clicking itself
+     */
     function checkZ_index(id) {
         var class_elements = document.getElementsByClassName("iframe_div");
         var maxi_zIndex_num = 10;
@@ -1346,9 +1385,6 @@ let MainData = {
     document.querySelector('#C3_iframe_div').onclick = function () {
         checkZ_index("C3_iframe_div");
     }
-
-
-
-
+    /* Change iframe's z-index by clicking itself*/
 
 })();

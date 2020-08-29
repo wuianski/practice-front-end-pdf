@@ -376,6 +376,7 @@ let MainData = {
         height: ['46%', '100%'],//from this real default value to 0%
         top: ['45%', '0%'],//from this real default value to 0%
         right: ['25%', '0%'],//from this real default value to 0%
+        //zIndex: 99,
         zIndex: {
             value: [9, 99],//from this real default value to 99
             round: true
@@ -425,7 +426,7 @@ let MainData = {
         right: '25%',//this is a real default value
         //left: '60%',
         zIndex: {
-            value: [9, 10],//this is a real default value
+            value: [9, 9],//this is a real default value
             round: true
         },
         loop: false,
@@ -468,6 +469,7 @@ let MainData = {
         height: ['46%', '100%'],//from this real default value to 0%
         top: ['40%', '0%'],//from this real default value to 0%
         right: ['15%', '0%'],//from this real default value to 0%
+        //zIndex: 99,
         zIndex: {
             value: [8, 99],//from this real default value to 99
             round: true
@@ -560,6 +562,7 @@ let MainData = {
         height: ['46%', '100%'],//from this real default value to 0%
         top: ['35%', '0%'],//from this real default value to 0%
         right: ['5%', '0%'],//from this real default value to 0%
+        //zIndex: 99,
         zIndex: {
             value: [7, 99],//from this real default value to 99
             round: true
@@ -652,6 +655,7 @@ let MainData = {
         height: ['46%', '100%'],//from this real default value to 0%
         top: ['30%', '0%'],//from this real default value to 0%
         right: ['10%', '0%'],//from this real default value to 0%
+        //zIndex: 99,
         zIndex: {
             value: [6, 99],//from this real default value to 99
             round: true
@@ -744,6 +748,7 @@ let MainData = {
         height: ['46%', '100%'],//from this real default value to 0%
         top: ['25%', '0%'],//from this real default value to 0%
         right: ['12%', '0%'],//from this real default value to 0%
+        //zIndex: 99,
         zIndex: {
             value: [5, 99],//from this real default value to 99
             round: true
@@ -836,6 +841,7 @@ let MainData = {
         height: ['46%', '100%'],//from this real default value to 0%
         top: ['20%', '0%'],//from this real default value to 0%
         right: ['20%', '0%'],//from this real default value to 0%
+        //zIndex: 99,
         zIndex: {
             value: [4, 99],//from this real default value to 99
             round: true
@@ -928,6 +934,7 @@ let MainData = {
         height: ['46%', '100%'],//from this real default value to 0%
         top: ['15%', '0%'],//from this real default value to 0%
         right: ['15%', '0%'],//from this real default value to 0%
+        //zIndex: 99,
         zIndex: {
             value: [3, 99],//from this real default value to 99
             round: true
@@ -1020,6 +1027,7 @@ let MainData = {
         height: ['46%', '100%'],//from this real default value to 0%
         top: ['10%', '0%'],//from this real default value to 0%
         right: ['6%', '0%'],//from this real default value to 0%
+        //zIndex: 99,
         zIndex: {
             value: [2, 99],//from this real default value to 99
             round: true
@@ -1112,6 +1120,7 @@ let MainData = {
         height: ['46%', '100%'],//from this real default value to 0%
         top: ['5%', '0%'],//from this real default value to 0%
         right: ['3%', '0%'],//from this real default value to 0%
+        //zIndex: 99,
         zIndex: {
             value: [1, 99],//from this real default value to 99
             round: true
@@ -1292,10 +1301,6 @@ let MainData = {
         }
     });
     /* Receive postMessage from iframe */
-
-    var A1_iframe_div_m = document.createElement('div');
-    A1_iframe_div_m.setAttribute('id', 'A1_iframe_div_m');
-    document.body.appendChild(A1_iframe_div_m);
 
     function checkZ_index(id) {
         var class_elements = document.getElementsByClassName("iframe_div");

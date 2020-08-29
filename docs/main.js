@@ -1205,6 +1205,7 @@ let MainData = {
         })
 
     }
+
     /* Trigger all frames slide in-out after click #bt1 */
 
 
@@ -1295,6 +1296,50 @@ let MainData = {
     var A1_iframe_div_m = document.createElement('div');
     A1_iframe_div_m.setAttribute('id', 'A1_iframe_div_m');
     document.body.appendChild(A1_iframe_div_m);
+
+    function checkZ_index(id) {
+        var class_elements = document.getElementsByClassName("iframe_div");
+        for (var i = 0, len = class_elements.length; i < len; i++) {
+            // elements[i].style ...
+            var id_element = document.getElementById(id);
+            console.log(class_elements[i].style.zIndex);
+            if (id_element.style.zIndex < 10) {
+                id_element.style.zIndex = 10;
+            } else if (class_elements[i].id != id) {
+                class_elements[i].style.zIndex = i - 1;
+            }
+        }
+    }
+
+    document.querySelector('#A1_iframe_div').onclick = function () {
+        checkZ_index("A1_iframe_div");
+    }
+    document.querySelector('#A2_iframe_div').onclick = function () {
+        checkZ_index("A2_iframe_div");
+    }
+    document.querySelector('#A3_iframe_div').onclick = function () {
+        checkZ_index("A3_iframe_div");
+    }
+    document.querySelector('#B1_iframe_div').onclick = function () {
+        checkZ_index("B1_iframe_div");
+    }
+    document.querySelector('#B2_iframe_div').onclick = function () {
+        checkZ_index("B2_iframe_div");
+    }
+    document.querySelector('#B3_iframe_div').onclick = function () {
+        checkZ_index("B3_iframe_div");
+    }
+    document.querySelector('#C1_iframe_div').onclick = function () {
+        checkZ_index("C1_iframe_div");
+    }
+    document.querySelector('#C2_iframe_div').onclick = function () {
+        checkZ_index("C2_iframe_div");
+    }
+    document.querySelector('#C3_iframe_div').onclick = function () {
+        checkZ_index("C3_iframe_div");
+    }
+
+
 
 
 

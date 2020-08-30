@@ -93,7 +93,12 @@
 			}
 			window.parent.postMessage(data, '*');
 		};
-		var instance = OverlayScrollbars(document.querySelectorAll('body'), { className: "os-theme-round-dark", paddingAbsolute: true, });
+		var instance = OverlayScrollbars(document.querySelectorAll('body'), {
+			className: "os-theme-round-dark", paddingAbsolute: true, overflowBehavior: {
+				x: "hidden",
+				y: "scroll"
+			}
+		});
 
 		bindEvent(instance, window, 'scroll', function (e) {
 			//var scroll_Y = window.scrollY;

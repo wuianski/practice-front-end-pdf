@@ -12,7 +12,7 @@ let MainData = {
             result = this.defaultPdf;
         } else {
             result = [...new Set(result)];
-            result = result.sort();
+            //result = result.sort();
         }
 
         return result.map(x => `filehost/${x}`);
@@ -473,6 +473,7 @@ let MainData = {
         height: ['46%', '100%'],//from this real default value to 0%
         top: ['40%', '0%'],//from this real default value to 0%
         right: ['15%', '0%'],//from this real default value to 0%
+        //
         //zIndex: 99,
         /*zIndex: {
             value: 99,//from this real default value to 99
@@ -1250,8 +1251,29 @@ let MainData = {
         })
 
     }
-
     /* Trigger all frames slide in-out after click #bt1 */
+
+    /*
+     *  #bt1, #bt2, close_btn setting
+     */
+    document.querySelector('#bt2').onclick = function () {
+        var popup_share = document.getElementById("popup_share");
+        popup_share.style.display = "block";
+
+        document.getElementById('bt1').style.pointerEvents = 'none';
+        document.getElementById('bt2').style.pointerEvents = 'none';
+    }
+    // Close share element.
+    document.querySelector('#close_btn').onclick = function () {
+        //var popup_share = document.getElementById("popup_share");
+        //popup_share.style.display = "none";
+        //var popup_share = document.getElementById("imgContainer");
+        //popup_share.style.display = "none";
+
+        document.getElementById('bt1').style.pointerEvents = 'auto';
+        document.getElementById('bt2').style.pointerEvents = 'auto';
+    }
+    /* #bt1, #bt2, close_btn setting */
 
 
     /*

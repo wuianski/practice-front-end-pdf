@@ -111,7 +111,7 @@ let MainData = {
     Animation_A1
         .add({
             targets: '#imgA1',
-            translateX: function () { return anime.random(10, 14) + 'rem'; },
+            translateX: function () { return anime.random(-10, -14) + 'rem'; },
             translateY: function () { return anime.random(10, 14) + 'rem'; },
             scale: function () { return anime.random(10, 20) / 10; },
             rotate: function () { return anime.random(-360, 360); },
@@ -140,7 +140,7 @@ let MainData = {
         .add({
             targets: '#imgA2',
             translateX: function () { return anime.random(33, 10) + 'rem'; },
-            translateY: function () { return anime.random(13, 30) + 'rem'; },
+            translateY: function () { return anime.random(-13, -30) + 'rem'; },
             scale: function () { return anime.random(8, 15) / 10; },
             rotate: function () { return anime.random(-360, 360); },
             duration: function () { return anime.random(300, 600); },
@@ -223,8 +223,8 @@ let MainData = {
     Animation_B2
         .add({
             targets: '#imgB2',
-            translateX: function () { return anime.random(33, 10) + 'rem'; },
-            translateY: function () { return anime.random(13, 30) + 'rem'; },
+            translateX: function () { return anime.random(13, -20) + 'rem'; },
+            translateY: function () { return anime.random(-13, 20) + 'rem'; },
             scale: function () { return anime.random(8, 15) / 10; },
             rotate: function () { return anime.random(-360, 360); },
             duration: function () { return anime.random(300, 600); },
@@ -252,7 +252,7 @@ let MainData = {
         .add({
             targets: '#imgB3',
             translateX: function () { return anime.random(10, 14) + 'rem'; },
-            translateY: function () { return anime.random(10, 14) + 'rem'; },
+            translateY: function () { return anime.random(-10, -14) + 'rem'; },
             scale: function () { return anime.random(10, 20) / 10; },
             rotate: function () { return anime.random(-360, 360); },
             duration: function () { return anime.random(200, 500); },
@@ -318,8 +318,8 @@ let MainData = {
     Animation_C2
         .add({
             targets: '#imgC2',
-            translateX: function () { return anime.random(33, 10) + 'rem'; },
-            translateY: function () { return anime.random(13, 30) + 'rem'; },
+            translateX: function () { return anime.random(-33, 10) + 'rem'; },
+            translateY: function () { return anime.random(-13, -30) + 'rem'; },
             scale: function () { return anime.random(8, 15) / 10; },
             rotate: function () { return anime.random(-360, 360); },
             duration: function () { return anime.random(300, 600); },

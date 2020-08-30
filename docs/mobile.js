@@ -70,9 +70,15 @@ let MainData = {
     const SlideContainerAni = anime({
         targets: '#imgContainer',
         width: '70vw',//this is a real default value
+        //width: '320px',
         height: '38vh',//this is a real default value
         top: '25vh',//this is a real default value
         left: '15vw',//this is a real default value
+        //top: '0',
+        //left: '0',
+        //bottom: '0',
+        //right: '0',
+
         minWidth: '200px',
         zIndex: {
             value: [90, 90],

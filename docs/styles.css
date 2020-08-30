@@ -173,6 +173,7 @@ body {
     width:35%;
     height:75%;
     top:13%;
+    /*margin: auto;*/
 }
 #img0{
     height: 50px;
@@ -342,7 +343,8 @@ body {
     .share_container{
         position: absolute;
         min-width: 200px;
-        width: 75vw;
+        /*width: 75vw;*/
+        width: 320px;
     }
     #share_bg{
         width: 100%;
@@ -351,11 +353,11 @@ body {
         display: none;
     }
     #share_img{
-        bottom: 73px;
-        right: 103px;
+        bottom: 53px;
+        right: 120px;
     }
     #close_btn{
-        top: 60px;
+        top: 32px;
     }
     /*#A1_iframe_div{
     position: absolute;
@@ -411,11 +413,11 @@ body {
         display: none;
     }
     #share_img{
-        bottom: 73px;
-        right: 103px;
+        bottom: 53px;
+        right: 120px;
     }
     #close_btn{
-        top: 60px;
+        top: 32px;
     }
     /*#A1_iframe_div{
     position: absolute;

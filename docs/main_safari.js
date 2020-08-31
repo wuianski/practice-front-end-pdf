@@ -54,7 +54,7 @@ let MainData = {
     /* first setting of imgContainer */
     anime({
         targets: '#imgContainer',
-        left: '-80%', //this is a fist instant value
+        left: '-60%', //this is a fist instant value
         loop: false,
         duration: 0,
         autoplay: true,
@@ -411,7 +411,7 @@ let MainData = {
         targets: '#A1_iframe_div',
         //right: '-360px', //this is a fist instant value
         //right: '0%',
-        //translateX: '570',
+        translateX: '570',
         loop: false,
         duration: 0,
         autoplay: true,
@@ -429,8 +429,8 @@ let MainData = {
         width: '23%',//this is a real default value
         height: '46%',//this is a real default value
         top: '45%',//this is a real default value
-        //translateX: '0',
-        right: ['-20%', '25%'],//this is a real default value
+        translateX: '0',
+        right: '25%',//this is a real default value
         //left: '60%',
         /*zIndex: {
             value: [9, 9],//this is a real default value
@@ -512,7 +512,7 @@ let MainData = {
         targets: '#A2_iframe_div',
         //right: '-360px', //this is a fist instant value
         //right: '0%',
-        //translateX: '370',
+        translateX: '370',
         loop: false,
         duration: 0,
         autoplay: true,
@@ -530,8 +530,8 @@ let MainData = {
         width: '23%',//this is a real default value
         height: '46%',//this is a real default value
         top: '40%',//this is a real default value
-        //translateX: '0',
-        right: ['-20%', '15%'],//this is a real default value
+        translateX: '0',
+        right: '15%',//this is a real default value
         //left: '60%',
         /*zIndex: {
             value: [8, 8],//this is a real default value
@@ -612,7 +612,7 @@ let MainData = {
         targets: '#A3_iframe_div',
         //right: '-360px', //this is a fist instant value
         //right: '0%',
-        //translateX: '370',
+        translateX: '370',
         loop: false,
         duration: 0,
         autoplay: true,
@@ -630,8 +630,8 @@ let MainData = {
         width: '23%',//this is a real default value
         height: '46%',//this is a real default value
         top: '35%',//this is a real default value
-        //translateX: '0',
-        right: ['-20%', '5%'],//this is a real default value
+        translateX: '0',
+        right: '5%',//this is a real default value
         //left: '60%',
         /*zIndex: {
             value: [7, 7],//this is a real default value
@@ -712,7 +712,7 @@ let MainData = {
         targets: '#B1_iframe_div',
         //right: '-360px', //this is a fist instant value
         //right: '0%',
-        //translateX: '370',
+        translateX: '370',
         loop: false,
         duration: 0,
         autoplay: true,
@@ -730,8 +730,8 @@ let MainData = {
         width: '23%',//this is a real default value
         height: '46%',//this is a real default value
         top: '30%',//this is a real default value
-        //translateX: '0',
-        right: ['-20%', '10%'],//this is a real default value
+        translateX: '0',
+        right: '10%',//this is a real default value
         //left: '60%',
         /*zIndex: {
             value: [6, 6],//this is a real default value
@@ -812,7 +812,7 @@ let MainData = {
         targets: '#B2_iframe_div',
         //right: '-360px', //this is a fist instant value
         //right: '0%',
-        //translateX: '370',
+        translateX: '370',
         loop: false,
         duration: 0,
         autoplay: true,
@@ -830,8 +830,8 @@ let MainData = {
         width: '23%',//this is a real default value
         height: '46%',//this is a real default value
         top: '25%',//this is a real default value
-        //translateX: '0',
-        right: ['-20%', '12%'],//this is a real default value
+        translateX: '0',
+        right: '12%',//this is a real default value
         //left: '60%',
         /*zIndex: {
             value: [5, 5],//this is a real default value
@@ -912,7 +912,7 @@ let MainData = {
         targets: '#B3_iframe_div',
         //right: '-360px', //this is a fist instant value
         //right: '0%',
-        //translateX: '370',
+        translateX: '370',
         loop: false,
         duration: 0,
         autoplay: true,
@@ -930,8 +930,8 @@ let MainData = {
         width: '23%',//this is a real default value
         height: '46%',//this is a real default value
         top: '20%',//this is a real default value
-        //translateX: '0',
-        right: ['-20%', '20%'],//this is a real default value
+        translateX: '0',
+        right: '20%',//this is a real default value
         //left: '60%',
         /*zIndex: {
             value: [4, 4],//this is a real default value
@@ -1012,7 +1012,7 @@ let MainData = {
         targets: '#C1_iframe_div',
         //right: '-360px', //this is a fist instant value
         //right: '0%',
-        //translateX: '370',
+        translateX: '370',
         loop: false,
         duration: 0,
         autoplay: true,
@@ -1030,8 +1030,8 @@ let MainData = {
         width: '23%',//this is a real default value
         height: '46%',//this is a real default value
         top: '15%',//this is a real default value
-        //translateX: '0',
-        right: ['-20%', '15%'],//this is a real default value
+        translateX: '0',
+        right: '15%',//this is a real default value
         //left: '60%',
         /*zIndex: {
             value: [3, 3],//this is a real default value
@@ -1112,7 +1112,7 @@ let MainData = {
         targets: '#C2_iframe_div',
         //right: '-360px', //this is a fist instant value
         //right: '0%',
-        //translateX: '370',
+        translateX: '370',
         loop: false,
         duration: 0,
         autoplay: true,
@@ -1130,8 +1130,8 @@ let MainData = {
         width: '23%',//this is a real default value
         height: '46%',//this is a real default value
         top: '10%',//this is a real default value
-        //translateX: '0',
-        right: ['-20%', '6%'],//this is a real default value
+        translateX: '0',
+        right: '6%',//this is a real default value
         //left: '60%',
         /*zIndex: {
             value: [2, 2],//this is a real default value
@@ -1211,8 +1211,8 @@ let MainData = {
     anime({
         targets: '#C3_iframe_div',
         //right: '-360px', //this is a fist instant value
-        //right: '0%',
-        //translateX: '370',
+        //right: '3%',
+        translateX: '370',
         loop: false,
         duration: 0,
         autoplay: true,
@@ -1230,8 +1230,8 @@ let MainData = {
         width: '23%',//this is a real default value
         height: '46%',//this is a real default value
         top: '5%',//this is a real default value
-        //translateX: '0',
-        right: ['-20%', '3%'],//this is a real default value
+        translateX: '0',
+        right: '3%',//this is a real default value
         //translateX: '-60%',
         //left: '60%',
         /*zIndex: {

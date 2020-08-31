@@ -33,7 +33,7 @@ let MainData = {
     /* Create the imgContainer  */
 
     /* Scale up imgContainer */
-    const ContainerAni = anime({
+    /*const ContainerAni = anime({
         targets: '#imgContainer',
         width: ['35%', '49%'],//from this real default value to 0%
         height: ['75%', '100%'],//from this real default value to 0%
@@ -48,7 +48,7 @@ let MainData = {
         duration: 500,
         autoplay: false,
         easing: "easeInOutSine"
-    })
+    })*/
     /* Scale up imgContainer */
 
     /* first setting of imgContainer */
@@ -58,7 +58,8 @@ let MainData = {
         height: '38vh',//this is a fist instant value
         top: '25vh',//this is a fist instant value
         left: '-500px', //this is a fist instant value
-        minWidth: '200px',
+        //left: '-60%', //this is a fist instant value
+        //minWidth: '100px',
         loop: false,
         duration: 0,
         autoplay: true,
@@ -69,17 +70,17 @@ let MainData = {
     /* Slide in after click #bt1 */
     const SlideContainerAni = anime({
         targets: '#imgContainer',
-        width: '70vw',//this is a real default value
+        width: '70vw%',//this is a real default value
         //width: '320px',
-        height: '38vh',//this is a real default value
+        height: '38vh%',//this is a real default value
         top: '25vh',//this is a real default value
-        left: '15vw',//this is a real default value
+        left: '15%',//this is a real default value
         //top: '0',
         //left: '0',
         //bottom: '0',
         //right: '0',
 
-        minWidth: '200px',
+        //minWidth: '100px',
         zIndex: {
             value: [90, 90],
             round: true
@@ -381,12 +382,13 @@ let MainData = {
     /* Create the A1_iframe */
 
     /* Scale up after click A1_iframe_scale */
-    const A1zindexAni = anime({
+    const A1zindexAni = anime.timeline({
         targets: '#A1_iframe_div',
         width: ['80vw', '96vw'],//from this real default value to 0%
-        height: ['5vh', '100vh'],//from this real default value to 0%
+        height: ['4vh', '100vh'],//from this real default value to 0%
         top: ['10vh', '0vh'],//from this real default value to 0%
         right: ['0%', '0%'],//from this real default value to 0%
+        //minWidth: '100px',
         //zIndex: 99,
         /*zIndex: {
             value: 99,//from this real default value to 99
@@ -398,6 +400,13 @@ let MainData = {
         autoplay: false,
         easing: "easeInOutSine"
     })
+    A1zindexAni
+        .add({
+            targets: '#A1_iframe',
+            opacity: [0, 1],
+            // override the easing parameter
+            //easing: 'spring',
+        })
 
     document.querySelector('#A1_iframe_scale').onclick = function () {
         A1zindexAni.play();
@@ -422,9 +431,12 @@ let MainData = {
     /* first setting of A1_iframe_div */
     anime({
         targets: '#A1_iframe_div',
-        right: '-360px', //this is a fist instant value
+        //right: '-360px', //this is a fist instant value
+        //right: '0%',
+        //translateX: '350',
+        //left: '360px', //this is a fist instant value
         loop: false,
-        duration: 0,
+        duration: 200,
         autoplay: true,
         easing: "easeInOutSine",
         zIndex: {
@@ -435,13 +447,15 @@ let MainData = {
     /* first setting of A1_iframe_div */
 
     /* Slide setting of A1_iframe_div */
-    const A1startAni = anime({
+    const A1startAni = anime.timeline({
         targets: '#A1_iframe_div',
-        width: '80vw',//this is a real default value
-        height: '5vh',//this is a real default value
+        width: ['6vw', '80vw'],//this is a real default value
+        height: '4vh',//this is a real default value
         top: '10vh',//this is a real default value
+        //translateX: ['350', '0'],
         right: '0%',//this is a real default value
-        minWidth: '80vw',//OVERRIDE default value in css.
+        //left: '0px', //this is a fist instant value
+        //minWidth: '100px',//OVERRIDE default value in css.
         /*zIndex: {
             value: [9, 9],//this is a real default value
             round: true
@@ -452,6 +466,13 @@ let MainData = {
         autoplay: false,
         easing: "easeInOutSine"
     })
+    A1startAni
+        .add({
+            targets: '#A1_iframe_scale',
+            opacity: [0, 1],
+            // override the easing parameter
+            //easing: 'spring',
+        })
     /* Slide setting of A1_iframe_div */
 
     /* 
@@ -480,12 +501,13 @@ let MainData = {
     /* Create the A2_iframe */
 
     /* Scale up after click A2_iframe_scale */
-    const A2zindexAni = anime({
+    const A2zindexAni = anime.timeline({
         targets: '#A2_iframe_div',
         width: ['75vw', '96vw'],//from this real default value to 0%
-        height: ['5vh', '100vh'],//from this real default value to 0%
-        top: ['19vh', '0vh'],//from this real default value to 0%
+        height: ['4vh', '100vh'],//from this real default value to 0%
+        top: ['18vh', '0vh'],//from this real default value to 0%
         right: ['0%', '0%'],//from this real default value to 0%
+        //minWidth: '100px',
         //zIndex: 99,
         /*zIndex: {
             value: 99,//from this real default value to 99
@@ -497,6 +519,13 @@ let MainData = {
         autoplay: false,
         easing: "easeInOutSine"
     })
+    A2zindexAni
+        .add({
+            targets: '#A2_iframe',
+            opacity: [0, 1],
+            // override the easing parameter
+            //easing: 'spring',
+        })
 
     document.querySelector('#A2_iframe_scale').onclick = function () {
         A2zindexAni.play();
@@ -521,9 +550,11 @@ let MainData = {
     /* first setting of A2_iframe_div */
     anime({
         targets: '#A2_iframe_div',
-        right: '-360px', //this is a fist instant value
+        //right: '-360px', //this is a fist instant value
+        //right: '0%',
+        //translateX: '350',
         loop: false,
-        duration: 0,
+        duration: 200,
         autoplay: true,
         easing: "easeInOutSine",
         zIndex: {
@@ -534,13 +565,14 @@ let MainData = {
     /* first setting of A2_iframe_div */
 
     /* Slide setting of A2_iframe_div */
-    const A2startAni = anime({
+    const A2startAni = anime.timeline({
         targets: '#A2_iframe_div',
-        width: '75vw',//this is a real default value
-        height: '5vh',//this is a real default value
-        top: '19vh',//this is a real default value
+        width: ['6vw', '75vw'],//this is a real default value
+        height: '4vh',//this is a real default value
+        top: '18vh',//this is a real default value
+        //translateX: ['350', '0'],
         right: '0%',//this is a real default value
-        minWidth: '75vw',//OVERRIDE default value in css.
+        //minWidth: '100px',//OVERRIDE default value in css.
         //left: '60%',
         /*zIndex: {
             value: [8, 8],//this is a real default value
@@ -552,6 +584,13 @@ let MainData = {
         autoplay: false,
         easing: "easeInOutSine"
     })
+    A2startAni
+        .add({
+            targets: '#A2_iframe_scale',
+            opacity: [0, 1],
+            // override the easing parameter
+            //easing: 'spring',
+        })
     /* Slide setting of A2_iframe_div */
 
     /* 
@@ -580,12 +619,13 @@ let MainData = {
     /* Create the A3_iframe */
 
     /* Scale up after click A3_iframe_scale */
-    const A3zindexAni = anime({
+    const A3zindexAni = anime.timeline({
         targets: '#A3_iframe_div',
         width: ['78vw', '96vw'],//from this real default value to 0%
-        height: ['5vh', '100vh'],//from this real default value to 0%
-        top: ['28vh', '0vh'],//from this real default value to 0%
+        height: ['4vh', '100vh'],//from this real default value to 0%
+        top: ['26vh', '0vh'],//from this real default value to 0%
         right: ['0%', '0%'],//from this real default value to 0%
+        //minWidth: '100px',
         //zIndex: 99,
         /*zIndex: {
             value: 99,//from this real default value to 99
@@ -597,6 +637,13 @@ let MainData = {
         autoplay: false,
         easing: "easeInOutSine"
     })
+    A3zindexAni
+        .add({
+            targets: '#A3_iframe',
+            opacity: [0, 1],
+            // override the easing parameter
+            //easing: 'spring',
+        })
 
     document.querySelector('#A3_iframe_scale').onclick = function () {
         A3zindexAni.play();
@@ -621,9 +668,11 @@ let MainData = {
     /* first setting of A3_iframe_div */
     anime({
         targets: '#A3_iframe_div',
-        right: '-360px', //this is a fist instant value
+        //right: '-360px', //this is a fist instant value
+        //right: '0%',
+        //translateX: '350',
         loop: false,
-        duration: 0,
+        duration: 200,
         autoplay: true,
         easing: "easeInOutSine",
         zIndex: {
@@ -634,13 +683,14 @@ let MainData = {
     /* first setting of A3_iframe_div */
 
     /* Slide setting of A3_iframe_div */
-    const A3startAni = anime({
+    const A3startAni = anime.timeline({
         targets: '#A3_iframe_div',
-        width: '78vw',//this is a real default value
-        height: '5vh',//this is a real default value
-        top: '28vh',//this is a real default value
+        width: ['6vw', '78vw'],//this is a real default value
+        height: '4vh',//this is a real default value
+        top: '26vh',//this is a real default value
+        //translateX: ['350', '0'],
         right: '0%',//this is a real default value
-        minWidth: '78vw',//OVERRIDE default value in css.
+        //minWidth: '100px',//OVERRIDE default value in css.
         //left: '60%',
         /*zIndex: {
             value: [7, 7],//this is a real default value
@@ -652,6 +702,13 @@ let MainData = {
         autoplay: false,
         easing: "easeInOutSine"
     })
+    A3startAni
+        .add({
+            targets: '#A3_iframe_scale',
+            opacity: [0, 1],
+            // override the easing parameter
+            //easing: 'spring',
+        })
     /* Slide setting of A3_iframe_div */
 
     /* 
@@ -680,12 +737,13 @@ let MainData = {
     /* Create the B1_iframe */
 
     /* Scale up after click B1_iframe_scale */
-    const B1zindexAni = anime({
+    const B1zindexAni = anime.timeline({
         targets: '#B1_iframe_div',
         width: ['90vw', '96vw'],//from this real default value to 0%
-        height: ['5vh', '100vh'],//from this real default value to 0%
-        top: ['37vh', '0vh'],//from this real default value to 0%
+        height: ['4vh', '100vh'],//from this real default value to 0%
+        top: ['34vh', '0vh'],//from this real default value to 0%
         right: ['0%', '0%'],//from this real default value to 0%
+        //minWidth: '100px',
         //zIndex: 99,
         /*zIndex: {
             value: 99,//from this real default value to 99
@@ -697,6 +755,13 @@ let MainData = {
         autoplay: false,
         easing: "easeInOutSine"
     })
+    B1zindexAni
+        .add({
+            targets: '#B1_iframe',
+            opacity: [0, 1],
+            // override the easing parameter
+            //easing: 'spring',
+        })
 
     document.querySelector('#B1_iframe_scale').onclick = function () {
         B1zindexAni.play();
@@ -721,9 +786,11 @@ let MainData = {
     /* first setting of B1_iframe_div */
     anime({
         targets: '#B1_iframe_div',
-        right: '-360px', //this is a fist instant value
+        //right: '-360px', //this is a fist instant value
+        //right: '0%',
+        //translateX: '350',
         loop: false,
-        duration: 0,
+        duration: 200,
         autoplay: true,
         easing: "easeInOutSine",
         zIndex: {
@@ -734,13 +801,14 @@ let MainData = {
     /* first setting of B1_iframe_div */
 
     /* Slide setting of B1_iframe_div */
-    const B1startAni = anime({
+    const B1startAni = anime.timeline({
         targets: '#B1_iframe_div',
-        width: '90vw',//this is a real default value
-        height: '5vh',//this is a real default value
-        top: '37vh',//this is a real default value
+        width: ['6vw', '90vw'],//this is a real default value
+        height: '4vh',//this is a real default value
+        top: '34vh',//this is a real default value
+        //translateX: ['350', '0'],
         right: '0%',//this is a real default value
-        minWidth: '90vw',//OVERRIDE default value in css.
+        //minWidth: '100px',//OVERRIDE default value in css.
         //left: '60%',
         /*zIndex: {
             value: [6, 6],//this is a real default value
@@ -752,6 +820,13 @@ let MainData = {
         autoplay: false,
         easing: "easeInOutSine"
     })
+    B1startAni
+        .add({
+            targets: '#B1_iframe_scale',
+            opacity: [0, 1],
+            // override the easing parameter
+            //easing: 'spring',
+        })
     /* Slide setting of B1_iframe_div */
 
     /* 
@@ -780,12 +855,13 @@ let MainData = {
     /* Create the B2_iframe */
 
     /* Scale up after click B2_iframe_scale */
-    const B2zindexAni = anime({
+    const B2zindexAni = anime.timeline({
         targets: '#B2_iframe_div',
         width: ['86vw', '96vw'],//from this real default value to 0%
-        height: ['5vh', '100vh'],//from this real default value to 0%
-        top: ['46vh', '0vh'],//from this real default value to 0%
+        height: ['4vh', '100vh'],//from this real default value to 0%
+        top: ['42vh', '0vh'],//from this real default value to 0%
         right: ['0%', '0%'],//from this real default value to 0%
+        //minWidth: '100px',
         //zIndex: 99,
         /*zIndex: {
             value: 99,//from this real default value to 99
@@ -797,6 +873,13 @@ let MainData = {
         autoplay: false,
         easing: "easeInOutSine"
     })
+    B2zindexAni
+        .add({
+            targets: '#B2_iframe',
+            opacity: [0, 1],
+            // override the easing parameter
+            //easing: 'spring',
+        })
 
     document.querySelector('#B2_iframe_scale').onclick = function () {
         B2zindexAni.play();
@@ -821,9 +904,11 @@ let MainData = {
     /* first setting of B2_iframe_div */
     anime({
         targets: '#B2_iframe_div',
-        right: '-360px', //this is a fist instant value
+        //right: '-360px', //this is a fist instant value
+        //right: '0%',
+        //translateX: '350',
         loop: false,
-        duration: 0,
+        duration: 200,
         autoplay: true,
         easing: "easeInOutSine",
         zIndex: {
@@ -834,13 +919,14 @@ let MainData = {
     /* first setting of B2_iframe_div */
 
     /* Slide setting of B2_iframe_div */
-    const B2startAni = anime({
+    const B2startAni = anime.timeline({
         targets: '#B2_iframe_div',
-        width: '86vw',//this is a real default value
-        height: '5vh',//this is a real default value
-        top: '46vh',//this is a real default value
+        width: ['6vw', '86vw'],//this is a real default value
+        height: '4vh',//this is a real default value
+        top: '42vh',//this is a real default value
+        //translateX: ['350', '0'],
         right: '0%',//this is a real default value
-        minWidth: '86vw',//OVERRIDE default value in css.
+        //minWidth: '100px',//OVERRIDE default value in css.
         //left: '60%',
         /*zIndex: {
             value: [5, 5],//this is a real default value
@@ -852,6 +938,13 @@ let MainData = {
         autoplay: false,
         easing: "easeInOutSine"
     })
+    B2startAni
+        .add({
+            targets: '#B2_iframe_scale',
+            opacity: [0, 1],
+            // override the easing parameter
+            //easing: 'spring',
+        })
     /* Slide setting of B2_iframe_div */
 
     /* 
@@ -880,12 +973,13 @@ let MainData = {
     /* Create the B3_iframe */
 
     /* Scale up after click B3_iframe_scale */
-    const B3zindexAni = anime({
+    const B3zindexAni = anime.timeline({
         targets: '#B3_iframe_div',
         width: ['81vw', '96vw'],//from this real default value to 0%
-        height: ['5vh', '100vh'],//from this real default value to 0%
-        top: ['55vh', '0vh'],//from this real default value to 0%
+        height: ['4vh', '100vh'],//from this real default value to 0%
+        top: ['50vh', '0vh'],//from this real default value to 0%
         right: ['0%', '0%'],//from this real default value to 0%
+        //minWidth: '100px',
         //zIndex: 99,
         /*zIndex: {
             value: 99,//from this real default value to 99
@@ -897,6 +991,13 @@ let MainData = {
         autoplay: false,
         easing: "easeInOutSine"
     })
+    B3zindexAni
+        .add({
+            targets: '#B3_iframe',
+            opacity: [0, 1],
+            // override the easing parameter
+            //easing: 'spring',
+        })
 
     document.querySelector('#B3_iframe_scale').onclick = function () {
         B3zindexAni.play();
@@ -921,9 +1022,11 @@ let MainData = {
     /* first setting of B3_iframe_div */
     anime({
         targets: '#B3_iframe_div',
-        right: '-360px', //this is a fist instant value
+        //right: '-360px', //this is a fist instant value
+        //right: '0%',
+        //translateX: '350',
         loop: false,
-        duration: 0,
+        duration: 200,
         autoplay: true,
         easing: "easeInOutSine",
         zIndex: {
@@ -934,13 +1037,14 @@ let MainData = {
     /* first setting of B3_iframe_div */
 
     /* Slide setting of B3_iframe_div */
-    const B3startAni = anime({
+    const B3startAni = anime.timeline({
         targets: '#B3_iframe_div',
-        width: '81vw',//this is a real default value
-        height: '5vh',//this is a real default value
-        top: '55vh',//this is a real default value
+        width: ['6vw', '81vw'],//this is a real default value
+        height: '4vh',//this is a real default value
+        top: '50vh',//this is a real default value
+        //translateX: ['350', '0'],
         right: '0%',//this is a real default value
-        minWidth: '81vw',//OVERRIDE default value in css.
+        //minWidth: '100px',//OVERRIDE default value in css.
         //left: '60%',
         /*zIndex: {
             value: [4, 4],//this is a real default value
@@ -952,6 +1056,13 @@ let MainData = {
         autoplay: false,
         easing: "easeInOutSine"
     })
+    B3startAni
+        .add({
+            targets: '#B3_iframe_scale',
+            opacity: [0, 1],
+            // override the easing parameter
+            //easing: 'spring',
+        })
     /* Slide setting of B3_iframe_div */
 
     /* 
@@ -980,12 +1091,13 @@ let MainData = {
     /* Create the C1_iframe */
 
     /* Scale up after click C1_iframe_scale */
-    const C1zindexAni = anime({
+    const C1zindexAni = anime.timeline({
         targets: '#C1_iframe_div',
         width: ['86vw', '96vw'],//from this real default value to 0%
-        height: ['5vh', '100vh'],//from this real default value to 0%
-        top: ['64vh', '0vh'],//from this real default value to 0%
+        height: ['4vh', '100vh'],//from this real default value to 0%
+        top: ['58vh', '0vh'],//from this real default value to 0%
         right: ['0%', '0%'],//from this real default value to 0%
+        //minWidth: '100px',
         //zIndex: 99,
         /*zIndex: {
             value: 99,//from this real default value to 99
@@ -997,6 +1109,13 @@ let MainData = {
         autoplay: false,
         easing: "easeInOutSine"
     })
+    C1zindexAni
+        .add({
+            targets: '#C1_iframe',
+            opacity: [0, 1],
+            // override the easing parameter
+            //easing: 'spring',
+        })
 
     document.querySelector('#C1_iframe_scale').onclick = function () {
         C1zindexAni.play();
@@ -1021,9 +1140,11 @@ let MainData = {
     /* first setting of C1_iframe_div */
     anime({
         targets: '#C1_iframe_div',
-        right: '-360px', //this is a fist instant value
+        //right: '-360px', //this is a fist instant value
+        //right: '0%',
+        //translateX: '350',
         loop: false,
-        duration: 0,
+        duration: 200,
         autoplay: true,
         easing: "easeInOutSine",
         zIndex: {
@@ -1034,13 +1155,14 @@ let MainData = {
     /* first setting of C1_iframe_div */
 
     /* Slide setting of C1_iframe_div */
-    const C1startAni = anime({
+    const C1startAni = anime.timeline({
         targets: '#C1_iframe_div',
-        width: '86vw',//this is a real default value
-        height: '5vh',//this is a real default value
-        top: '64vh',//this is a real default value
+        width: ['6vw', '86vw'],//this is a real default value
+        height: '4vh',//this is a real default value
+        top: '58vh',//this is a real default value
+        //translateX: ['350', '0'],
         right: '0%',//this is a real default value
-        minWidth: '86vw',//OVERRIDE default value in css.
+        //minWidth: '100px',//OVERRIDE default value in css.
         //left: '60%',
         /*zIndex: {
             value: [3, 3],//this is a real default value
@@ -1052,6 +1174,13 @@ let MainData = {
         autoplay: false,
         easing: "easeInOutSine"
     })
+    C1startAni
+        .add({
+            targets: '#C1_iframe_scale',
+            opacity: [0, 1],
+            // override the easing parameter
+            //easing: 'spring',
+        })
     /* Slide setting of C1_iframe_div */
 
     /* 
@@ -1080,12 +1209,13 @@ let MainData = {
     /* Create the C2_iframe */
 
     /* Scale up after click C2_iframe_scale */
-    const C2zindexAni = anime({
+    const C2zindexAni = anime.timeline({
         targets: '#C2_iframe_div',
         width: ['91vw', '96vw'],//from this real default value to 0%
-        height: ['5vh', '100vh'],//from this real default value to 0%
-        top: ['73vh', '0vh'],//from this real default value to 0%
+        height: ['4vh', '100vh'],//from this real default value to 0%
+        top: ['66vh', '0vh'],//from this real default value to 0%
         right: ['0%', '0%'],//from this real default value to 0%
+        //minWidth: '100px',
         //zIndex: 99,
         /*zIndex: {
             value: 99,//from this real default value to 99
@@ -1097,6 +1227,13 @@ let MainData = {
         autoplay: false,
         easing: "easeInOutSine"
     })
+    C2zindexAni
+        .add({
+            targets: '#C2_iframe',
+            opacity: [0, 1],
+            // override the easing parameter
+            //easing: 'spring',
+        })
 
     document.querySelector('#C2_iframe_scale').onclick = function () {
         C2zindexAni.play();
@@ -1124,9 +1261,11 @@ let MainData = {
     /* first setting of C2_iframe_div */
     anime({
         targets: '#C2_iframe_div',
-        right: '-360px', //this is a fist instant value
+        //right: '-360px', //this is a fist instant value
+        //right: '0%',
+        //translateX: '350',
         loop: false,
-        duration: 0,
+        duration: 200,
         autoplay: true,
         easing: "easeInOutSine",
         zIndex: {
@@ -1137,13 +1276,14 @@ let MainData = {
     /* first setting of C2_iframe_div */
 
     /* Slide setting of C2_iframe_div */
-    const C2startAni = anime({
+    const C2startAni = anime.timeline({
         targets: '#C2_iframe_div',
-        width: '91vw',//this is a real default value
-        height: '5vh',//this is a real default value
-        top: '73vh',//this is a real default value
+        width: ['6vw', '91vw'],//this is a real default value
+        height: '4vh',//this is a real default value
+        top: '66vh',//this is a real default value
+        //translateX: ['350', '0'],
         right: '0%',//this is a real default value
-        minWidth: '91vw',//OVERRIDE default value in css.
+        //minWidth: '100px',//OVERRIDE default value in css.
         //left: '60%',
         /*zIndex: {
             value: [2, 2],//this is a real default value
@@ -1155,6 +1295,13 @@ let MainData = {
         autoplay: false,
         easing: "easeInOutSine"
     })
+    C2startAni
+        .add({
+            targets: '#C2_iframe_scale',
+            opacity: [0, 1],
+            // override the easing parameter
+            //easing: 'spring',
+        })
     /* Slide setting of C2_iframe_div */
 
     /* 
@@ -1183,12 +1330,13 @@ let MainData = {
     /* Create the C3_iframe */
 
     /* Scale up after click C3_iframe_scale */
-    const C3zindexAni = anime({
+    const C3zindexAni = anime.timeline({
         targets: '#C3_iframe_div',
         width: ['81vw', '96vw'],//from this real default value to 0%
-        height: ['5vh', '100vh'],//from this real default value to 0%
-        top: ['82vh', '0vh'],//from this real default value to 0%
+        height: ['4vh', '100vh'],//from this real default value to 0%
+        top: ['74vh', '0vh'],//from this real default value to 0%
         right: ['0%', '0%'],//from this real default value to 0%
+        //minWidth: '100px',
         //zIndex: 99,
         /*zIndex: {
             value: 99,//from this real default value to 99
@@ -1199,6 +1347,13 @@ let MainData = {
         autoplay: false,
         easing: "easeInOutSine"
     })
+    C3zindexAni
+        .add({
+            targets: '#C3_iframe',
+            opacity: [0, 1],
+            // override the easing parameter
+            //easing: 'spring',
+        })
 
     document.querySelector('#C3_iframe_scale').onclick = function () {
         C3zindexAni.play();
@@ -1224,9 +1379,12 @@ let MainData = {
     /* first setting of C3_iframe_div */
     anime({
         targets: '#C3_iframe_div',
-        right: '-360px', //this is a fist instant value
+        //right: '-360px', //this is a fist instant value
+        //right: '0%',
+        //translateX: '350',
+        //minWidth: '100px',//OVERRIDE default value in css.
         loop: false,
-        duration: 0,
+        duration: 200,
         autoplay: true,
         easing: "easeInOutSine",
         zIndex: {
@@ -1237,13 +1395,15 @@ let MainData = {
     /* first setting of C3_iframe_div */
 
     /* Slide setting of C3_iframe_div */
-    const C3startAni = anime({
+    const C3startAni = anime.timeline({
         targets: '#C3_iframe_div',
-        width: '81vw',//this is a real default value
-        height: '5vh',//this is a real default value
-        top: '82vh',//this is a real default value
+        width: ['6vw', '81vw'],//this is a real default value
+        //opacity: [0, 1],
+        height: '4vh',//this is a real default value
+        top: '74vh',//this is a real default value
+        //translateX: ['350', '0'],
         right: '0%',//this is a real default value
-        minWidth: '81vw',//OVERRIDE default value in css.
+        //minWidth: '100px',//OVERRIDE default value in css.
         /*zIndex: {
             value: [1, 1],//this is a real default value
             round: true
@@ -1254,6 +1414,15 @@ let MainData = {
         autoplay: false,
         easing: "easeInOutSine"
     })
+    C3startAni
+        .add({
+            targets: '#C3_iframe_scale',
+            opacity: [0, 1],
+            // override the easing parameter
+            //easing: 'spring',
+        })
+
+
     /* Slide setting of C3_iframe_div */
 
 
@@ -1263,7 +1432,7 @@ let MainData = {
     document.querySelector('#bt1').onclick = function () {
         //disable the click event
         document.getElementById('bt1').style.pointerEvents = 'none';
-        document.querySelector('#C3_iframe').style.display = 'none';
+        /*document.querySelector('#C3_iframe').style.display = 'none';
         document.querySelector('#C2_iframe').style.display = 'none';
         document.querySelector('#C1_iframe').style.display = 'none';
         document.querySelector('#B3_iframe').style.display = 'none';
@@ -1271,7 +1440,7 @@ let MainData = {
         document.querySelector('#B1_iframe').style.display = 'none';
         document.querySelector('#A3_iframe').style.display = 'none';
         document.querySelector('#A2_iframe').style.display = 'none';
-        document.querySelector('#A1_iframe').style.display = 'none';
+        document.querySelector('#A1_iframe').style.display = 'none';*/
         A1startAni.play();
         A2startAni.play();
         A3startAni.play();
@@ -1295,6 +1464,12 @@ let MainData = {
             //SlideContainerAni.reverse();
             //re-enable the click event
             document.getElementById('bt1').style.pointerEvents = 'auto';
+            /*var x = document.getElementById("A1_iframe_scale");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }*/
         })
 
     }

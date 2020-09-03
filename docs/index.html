@@ -18,6 +18,9 @@
 </head>
 
 <body>
+    <div id="loaderC">
+        <div id="loader" class="center"></div>
+    </div>
 
     <img id="site_logo" src="assets/imgs/site_logo.png" alt="'site logo">
 
@@ -30,7 +33,9 @@
             <img class="bt" id="bt2" src="assets/imgs/bt2.png" alt="button share">
         </div>
         <div>
-            <img class="bt" id="bt3" src="assets/imgs/bt3.png" alt="button link">
+            <a href="https://www.ntmoa.tw/online-magazines/" target="_blank">
+                <img class="bt" id="bt3" src="assets/imgs/bt3.png" alt="button link">
+            </a>
         </div>
     </div>
 
@@ -75,13 +80,13 @@
                 <img id="download_pdf" src="assets/imgs/download_pdf.png">
             </div>
             <div onclick="share_img()">
-                <img id="share_img" src="assets/imgs/share_img.png">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.ntmoa.tw/online-magazines/"
+                    target="_blank">
+                    <img id="share_img" src="assets/imgs/share_img.png">
+                </a>
             </div>
         </div>
     </div>
-
-    <!--<script src="main.js"></script>-->
-    <!-- <script src="mobile.js"></script> -->
     <script src="pdf.js"></script>
     <script src="transition.js"></script>
     <script>
@@ -106,6 +111,21 @@
         }
 
         checkDevice();
+    </script>
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState !== "complete") {
+                document.querySelector(
+                    "body").style.visibility = "hidden";
+                document.querySelector(
+                    "#loaderC").style.visibility = "visible";
+            } else {
+                document.querySelector(
+                    "#loaderC").style.display = "none";
+                document.querySelector(
+                    "body").style.visibility = "visible";
+            }
+        }; 
     </script>
 </body>
 

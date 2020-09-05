@@ -1,5 +1,7 @@
 (function () {
-    File.prototype.arrayBuffer = File.prototype.arrayBuffer || myArrayBuffer;
+    if ('File' in self) {
+        File.prototype.arrayBuffer = File.prototype.arrayBuffer || myArrayBuffer
+    }
     Blob.prototype.arrayBuffer = Blob.prototype.arrayBuffer || myArrayBuffer;
 
     function myArrayBuffer() {

@@ -30,7 +30,12 @@
             <img class="bt" id="bt1" src="assets/imgs/bt1.png" alt="button info">
         </div>
         <div onclick="popUp2()">
-            <img class="bt" id="bt2" src="assets/imgs/bt2.png" alt="button share">
+            <picture>
+                <source media="(max-width: 799px)" srcset="assets/imgs/bt2_m.png">
+                <source media="(min-width: 800px)" srcset="assets/imgs/bt2.png">
+                <img class="bt" id="bt2" src="assets/imgs/bt2.png" alt="button share">
+            </picture>
+            <!--<img class="bt" id="bt2" src="assets/imgs/bt2.png" alt="button share">-->
         </div>
         <div>
             <a href="https://www.ntmoa.tw/online-magazines/" target="_blank">
@@ -80,7 +85,7 @@
                 <img id="download_pdf" src="assets/imgs/download_pdf.png">
             </div>
             <div onclick="share_img()">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.ntmoa.tw/online-magazines/"
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.ntmoa.tw/online-magazines/2020/summer/"
                     target="_blank">
                     <img id="share_img" src="assets/imgs/share_img.png">
                 </a>

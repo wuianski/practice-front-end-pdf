@@ -247,7 +247,7 @@ body {
 }
 #A3_iframe_div{
     position: absolute;
-    background-color:#ee7744;
+    background-color:#f29973;
     border: solid 1px #000000;
     padding:15px 0px 15px 15px;
     min-width: 380px;
@@ -357,6 +357,10 @@ body {
     position: absolute;
     width: 330px;
 }
+/*#C3_prev{
+    display: none;
+    font-style: italic;
+}*/
 
 @media screen and (min-width: 310px) and (max-width: 667px){
     #site_logo{

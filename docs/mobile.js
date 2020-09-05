@@ -427,6 +427,25 @@ let MainData = {
         }
     }
     /* Scale up after click A1_iframe_scale */
+    /*document.querySelector('#A1_iframe_title').onclick = function () {
+        A1zindexAni.play();
+        //ContainerAni.play();
+        A1zindexAni.finished.then(() => {
+            A1zindexAni.reverse();
+            //ContainerAni.reverse();
+        })
+
+        var img = document.getElementById('A1_iframe_scale').src;
+        if (img.indexOf('scaleDown.png') != -1) {
+            document.getElementById('A1_iframe_scale').src = 'assets/imgs/scaleUp.png';
+            document.querySelector('#A1_iframe').style.display = 'none';
+        }
+        else {
+            document.getElementById('A1_iframe_scale').src = 'assets/imgs/scaleDown.png';
+            document.querySelector('#A1_iframe').style.display = 'block';
+        }
+    }*/
+
 
     /* first setting of A1_iframe_div */
     anime({
@@ -1424,8 +1443,15 @@ let MainData = {
 
 
     /* Slide setting of C3_iframe_div */
-
-
+    /*document.querySelector('#C3_iframe_scale').style.pointerEvents = 'none';
+    document.querySelector('#C2_iframe_scale').style.pointerEvents = 'none';
+    document.querySelector('#C1_iframe_scale').style.pointerEvents = 'none';
+    document.querySelector('#B3_iframe_scale').style.pointerEvents = 'none';
+    document.querySelector('#B2_iframe_scale').style.pointerEvents = 'none';
+    document.querySelector('#B1_iframe_scale').style.pointerEvents = 'none';
+    document.querySelector('#A3_iframe_scale').style.pointerEvents = 'none';
+    document.querySelector('#A2_iframe_scale').style.pointerEvents = 'none';
+    document.querySelector('#A1_iframe_scale').style.pointerEvents = 'none';*/
     /*
      * Trigger all frames slide in-out after click #bt1 
      */
@@ -1450,6 +1476,15 @@ let MainData = {
         C1startAni.play();
         C2startAni.play();
         C3startAni.play();
+        /*document.querySelector('#C3_iframe_scale').style.pointerEvents = 'auto';
+        document.querySelector('#C2_iframe_scale').style.pointerEvents = 'auto';
+        document.querySelector('#C1_iframe_scale').style.pointerEvents = 'auto';
+        document.querySelector('#B3_iframe_scale').style.pointerEvents = 'auto';
+        document.querySelector('#B2_iframe_scale').style.pointerEvents = 'auto';
+        document.querySelector('#B1_iframe_scale').style.pointerEvents = 'auto';
+        document.querySelector('#A3_iframe_scale').style.pointerEvents = 'auto';
+        document.querySelector('#A2_iframe_scale').style.pointerEvents = 'auto';
+        document.querySelector('#A1_iframe_scale').style.pointerEvents = 'auto';*/
         //SlideContainerAni.play();
         A1startAni.finished.then(() => {
             A1startAni.reverse();

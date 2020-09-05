@@ -32,7 +32,7 @@ p.S_自訂-V_B4 {
 	widows:1;
 }
 p.S_自訂-V_Normal {
-	color:#000000;
+	color:#EBEBEB;
 	font-family:"Source Han Sans TW Light", sans-serif;
 	font-size:16px;
 	font-style:normal;
@@ -75,7 +75,7 @@ p.S_自訂-V_line {
 	widows:1;
 }
 p.S_自訂-V_圖說 {
-	color:#000000;
+	color:#EBEBEB;
 	font-family:"Source Han Sans TW Regular", sans-serif;
 	font-size:14px;
 	font-style:normal;
@@ -96,7 +96,7 @@ p.S_自訂-V_圖說 {
 	widows:1;
 }
 p.S_自訂-V_段落樣式2 {
-	color:#000000;
+	color:#EBEBEB;
 	font-family:"Source Han Sans TW Medium", sans-serif;
 	font-size:16px;
 	font-style:normal;
@@ -117,7 +117,7 @@ p.S_自訂-V_段落樣式2 {
 	widows:1;
 }
 span.超連結 {
-	color:#4f5cd6;
+	color:#f29973;
 	text-decoration:underline;
 }
 #_idContainer000, #_idContainer001, #_idContainer002 {

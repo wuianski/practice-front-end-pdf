@@ -1170,6 +1170,13 @@ let MainData = {
     C3_iframe_div.appendChild(C3_iframe);
     /* Create the C3_iframe */
 
+    /*var C3_prev = document.createElement('div');
+    C3_prev.setAttribute('id', 'C3_prev');
+    var C3_prevText = document.createTextNode("< prev");
+    C3_prev.appendChild(C3_prevText);
+    C3_iframe_div.appendChild(C3_prev);*/
+
+
     /* Scale up after click C3_iframe_scale */
     const C3zindexAni = anime({
         targets: '#C3_iframe_div',
@@ -1206,6 +1213,37 @@ let MainData = {
         }
     }
     /* Scale up after click C3_iframe_scale */
+
+    /*document.querySelector('#C3_prev').onclick = function () {
+       
+        C3zindexAni.play();
+        ContainerAni.play();
+        C3zindexAni.finished.then(() => {
+            C3zindexAni.reverse();
+            ContainerAni.reverse();
+        })
+        var img = document.getElementById('C3_iframe_scale').src;
+        if (img.indexOf('scaleDown.png') != -1) {
+            document.getElementById('C3_iframe_scale').src = 'assets/imgs/scaleUp.png';
+        }
+        else {
+            document.getElementById('C3_iframe_scale').src = 'assets/imgs/scaleDown.png';
+        }
+        checkZ_index("C2_iframe_div");
+        C2zindexAni.play();
+        ContainerAni.play();
+        C2zindexAni.finished.then(() => {
+            C2zindexAni.reverse();
+            ContainerAni.reverse();
+        })
+        var img = document.getElementById('C2_iframe_scale').src;
+        if (img.indexOf('scaleDown.png') != -1) {
+            document.getElementById('C2_iframe_scale').src = 'assets/imgs/scaleUp.png';
+        }
+        else {
+            document.getElementById('C2_iframe_scale').src = 'assets/imgs/scaleDown.png';
+        }
+    }*/
 
     /* first setting of C3_iframe_div */
     anime({
@@ -1345,7 +1383,7 @@ let MainData = {
 
             case 'b1':
                 // console.log(e.data.id);
-                // console.log(e.data.value);
+                //console.log(e.data.value);
                 sb1 = e.data.value;
                 Animation_B1.seek(sb1);
                 break;
@@ -1373,16 +1411,20 @@ let MainData = {
 
             case 'c2':
                 // console.log(e.data.id);
-                // console.log(e.data.value);
+                //console.log(e.data.value);
                 sc2 = e.data.value;
                 Animation_C2.seek(sc2);
                 break;
 
             case 'c3':
                 // console.log(e.data.id);
-                // console.log(e.data.value);
+                //console.log(e.data.value);
                 sc3 = e.data.value;
                 Animation_C3.seek(sc3);
+                /*if (sc3 >= 275) {
+                    console.log('max');
+                    C3_prev.style.display = "block";
+                }*/
                 break;
         }
     });
@@ -1403,7 +1445,7 @@ let MainData = {
                 id_element.style.zIndex = maxi_zIndex_num;
             } else if (class_elements[i].id != id) {
                 class_elements[i].style.zIndex = id_element.style.zIndex - i;
-                console.log(`click class_index ${class_elements[i].id} z-index:`, class_elements[i].style.zIndex);
+                //console.log(`click class_index ${class_elements[i].id} z-index:`, class_elements[i].style.zIndex);
             }
         }
     }

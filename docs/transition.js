@@ -60,6 +60,8 @@ function download_pdf() {
 
     var popup_share = document.getElementById("popup_share");
     popup_share.style.display = "none";
+    document.getElementById('bt1').style.pointerEvents = 'auto';
+    document.getElementById('bt2').style.pointerEvents = 'auto';
 
     let urls = MainData.getPdfUrls();
     let imgContainer = document.getElementById("imgContainer");

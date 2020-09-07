@@ -23,20 +23,14 @@ function showSlides(n) {
 
 // When the user clicks on bt1, open the popup intro slides.
 function popUp1() {
-    var popup = document.getElementById("popup_slide");
-    popup.style.display = "block";
-    //popup.classList.toggle("show");
-    //var popup_share = document.getElementById("popup_share");
-    //popup_share.style.display = "none";
+    /*var popup = document.getElementById("popup_slide");
+    popup.style.display = "block";*/
 }
 
 // When the user clicks on bt2, open the popup share element.
 function popUp2() {
     var popup_share = document.getElementById("popup_share");
     popup_share.style.display = "block";
-    //popup_share.classList.toggle("show2");
-    //var popup = document.getElementById("popup_slide");
-    //popup.style.display = "none";
 }
 
 // Close share element.
@@ -74,6 +68,8 @@ function download_pdf() {
 
 // Close share element.
 function share_img() {
-    //var popup_share = document.getElementById("popup_share");
-    //popup_share.style.display = "none";
+    /*var popup_share = document.getElementById("popup_share");
+    popup_share.style.display = "none";
+    document.getElementById('bt1').style.pointerEvents = 'auto';
+    document.getElementById('bt2').style.pointerEvents = 'auto';*/
 }

@@ -409,9 +409,6 @@ let MainData = {
     /* first setting of A1_iframe_div */
     anime({
         targets: '#A1_iframe_div',
-        //right: '-360px', //this is a fist instant value
-        //right: '0%',
-        //translateX: '570',
         loop: false,
         duration: 0,
         autoplay: true,
@@ -429,9 +426,7 @@ let MainData = {
         width: '23%',//this is a real default value
         height: '46%',//this is a real default value
         top: '45%',//this is a real default value
-        //translateX: '0',
         right: ['-20%', '25%'],//this is a real default value
-        //left: '60%',
         /*zIndex: {
             value: [9, 9],//this is a real default value
             round: true
@@ -510,9 +505,6 @@ let MainData = {
     /* first setting of A2_iframe_div */
     anime({
         targets: '#A2_iframe_div',
-        //right: '-360px', //this is a fist instant value
-        //right: '0%',
-        //translateX: '370',
         loop: false,
         duration: 0,
         autoplay: true,
@@ -530,9 +522,7 @@ let MainData = {
         width: '23%',//this is a real default value
         height: '46%',//this is a real default value
         top: '40%',//this is a real default value
-        //translateX: '0',
         right: ['-20%', '15%'],//this is a real default value
-        //left: '60%',
         /*zIndex: {
             value: [8, 8],//this is a real default value
             round: true
@@ -610,9 +600,6 @@ let MainData = {
     /* first setting of A3_iframe_div */
     anime({
         targets: '#A3_iframe_div',
-        //right: '-360px', //this is a fist instant value
-        //right: '0%',
-        //translateX: '370',
         loop: false,
         duration: 0,
         autoplay: true,
@@ -630,9 +617,7 @@ let MainData = {
         width: '23%',//this is a real default value
         height: '46%',//this is a real default value
         top: '35%',//this is a real default value
-        //translateX: '0',
         right: ['-20%', '5%'],//this is a real default value
-        //left: '60%',
         /*zIndex: {
             value: [7, 7],//this is a real default value
             round: true
@@ -710,9 +695,6 @@ let MainData = {
     /* first setting of B1_iframe_div */
     anime({
         targets: '#B1_iframe_div',
-        //right: '-360px', //this is a fist instant value
-        //right: '0%',
-        //translateX: '370',
         loop: false,
         duration: 0,
         autoplay: true,
@@ -730,9 +712,7 @@ let MainData = {
         width: '23%',//this is a real default value
         height: '46%',//this is a real default value
         top: '30%',//this is a real default value
-        //translateX: '0',
         right: ['-20%', '10%'],//this is a real default value
-        //left: '60%',
         /*zIndex: {
             value: [6, 6],//this is a real default value
             round: true
@@ -810,9 +790,6 @@ let MainData = {
     /* first setting of B2_iframe_div */
     anime({
         targets: '#B2_iframe_div',
-        //right: '-360px', //this is a fist instant value
-        //right: '0%',
-        //translateX: '370',
         loop: false,
         duration: 0,
         autoplay: true,
@@ -830,9 +807,7 @@ let MainData = {
         width: '23%',//this is a real default value
         height: '46%',//this is a real default value
         top: '25%',//this is a real default value
-        //translateX: '0',
         right: ['-20%', '12%'],//this is a real default value
-        //left: '60%',
         /*zIndex: {
             value: [5, 5],//this is a real default value
             round: true
@@ -910,9 +885,6 @@ let MainData = {
     /* first setting of B3_iframe_div */
     anime({
         targets: '#B3_iframe_div',
-        //right: '-360px', //this is a fist instant value
-        //right: '0%',
-        //translateX: '370',
         loop: false,
         duration: 0,
         autoplay: true,
@@ -930,9 +902,7 @@ let MainData = {
         width: '23%',//this is a real default value
         height: '46%',//this is a real default value
         top: '20%',//this is a real default value
-        //translateX: '0',
         right: ['-20%', '20%'],//this is a real default value
-        //left: '60%',
         /*zIndex: {
             value: [4, 4],//this is a real default value
             round: true
@@ -1010,9 +980,6 @@ let MainData = {
     /* first setting of C1_iframe_div */
     anime({
         targets: '#C1_iframe_div',
-        //right: '-360px', //this is a fist instant value
-        //right: '0%',
-        //translateX: '370',
         loop: false,
         duration: 0,
         autoplay: true,
@@ -1030,9 +997,7 @@ let MainData = {
         width: '23%',//this is a real default value
         height: '46%',//this is a real default value
         top: '15%',//this is a real default value
-        //translateX: '0',
         right: ['-20%', '15%'],//this is a real default value
-        //left: '60%',
         /*zIndex: {
             value: [3, 3],//this is a real default value
             round: true
@@ -1110,9 +1075,6 @@ let MainData = {
     /* first setting of C2_iframe_div */
     anime({
         targets: '#C2_iframe_div',
-        //right: '-360px', //this is a fist instant value
-        //right: '0%',
-        //translateX: '370',
         loop: false,
         duration: 0,
         autoplay: true,
@@ -1130,9 +1092,7 @@ let MainData = {
         width: '23%',//this is a real default value
         height: '46%',//this is a real default value
         top: '10%',//this is a real default value
-        //translateX: '0',
         right: ['-20%', '6%'],//this is a real default value
-        //left: '60%',
         /*zIndex: {
             value: [2, 2],//this is a real default value
             round: true
@@ -1248,9 +1208,6 @@ let MainData = {
     /* first setting of C3_iframe_div */
     anime({
         targets: '#C3_iframe_div',
-        //right: '-360px', //this is a fist instant value
-        //right: '0%',
-        //translateX: '370',
         loop: false,
         duration: 0,
         autoplay: true,
@@ -1268,10 +1225,7 @@ let MainData = {
         width: '23%',//this is a real default value
         height: '46%',//this is a real default value
         top: '5%',//this is a real default value
-        //translateX: '0',
         right: ['-20%', '3%'],//this is a real default value
-        //translateX: '-60%',
-        //left: '60%',
         /*zIndex: {
             value: [1, 1],//this is a real default value
             round: true
@@ -1284,7 +1238,7 @@ let MainData = {
     })
     /* Slide setting of C3_iframe_div */
 
-
+    document.querySelector('.slides_container').style.display = 'block';
     /*
      * Trigger all frames slide in-out after click #bt1 
      */
@@ -1315,6 +1269,13 @@ let MainData = {
             //re-enable the click event
             document.getElementById('bt1').style.pointerEvents = 'auto';
         })
+        var xslide = document.querySelector(".slides_container");
+        if (xslide.style.display === "block") {
+            xslide.style.transitionDuration = "1.5s";
+            xslide.style.display = "none";
+        } else {
+            xslide.style.display = "block";
+        }
 
     }
     /* Trigger all frames slide in-out after click #bt1 */
@@ -1331,11 +1292,6 @@ let MainData = {
     }
     // Close share element.
     document.querySelector('#close_btn').onclick = function () {
-        //var popup_share = document.getElementById("popup_share");
-        //popup_share.style.display = "none";
-        //var popup_share = document.getElementById("imgContainer");
-        //popup_share.style.display = "none";
-
         document.getElementById('bt1').style.pointerEvents = 'auto';
         document.getElementById('bt2').style.pointerEvents = 'auto';
     }

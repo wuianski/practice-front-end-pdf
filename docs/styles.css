@@ -61,7 +61,7 @@ body {
     padding-top: 11px;
 } 
 .slides_container{
-    visibility: hidden;
+    /*visibility: visible;*/
     width:600px;
     height: 600px;
     min-width: 600px;
@@ -69,7 +69,7 @@ body {
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
 }
-#slideW1{
+#slideW1,#slideW3{
     width:100%;
     position: absolute;
     left: 50%;
@@ -459,7 +459,7 @@ body {
         width: 60%;
         height: 60%;
     }
-    #slideW1{
+    #slideW1,#slideW3{
      width:60%; 
     }
     #slideW2{

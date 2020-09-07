@@ -388,14 +388,11 @@ let MainData = {
         height: ['4vh', '100vh'],//from this real default value to 0%
         top: ['10vh', '0vh'],//from this real default value to 0%
         right: ['0%', '0%'],//from this real default value to 0%
-        //minWidth: '100px',
-        //zIndex: 99,
-        /*zIndex: {
+        zIndex: {
             value: 99,//from this real default value to 99
             round: true
-        },*/
+        },
         loop: false,
-        //delay: 200,
         duration: 500,
         autoplay: false,
         easing: "easeInOutSine"
@@ -404,16 +401,12 @@ let MainData = {
         .add({
             targets: '#A1_iframe',
             opacity: [0, 1],
-            // override the easing parameter
-            //easing: 'spring',
         })
 
-    document.querySelector('#A1_iframe_scale').onclick = function () {
+    document.querySelector('#A1_iframe_div').onclick = function () {
         A1zindexAni.play();
-        //ContainerAni.play();
         A1zindexAni.finished.then(() => {
             A1zindexAni.reverse();
-            //ContainerAni.reverse();
         })
 
         var img = document.getElementById('A1_iframe_scale').src;
@@ -427,33 +420,10 @@ let MainData = {
         }
     }
     /* Scale up after click A1_iframe_scale */
-    /*document.querySelector('#A1_iframe_title').onclick = function () {
-        A1zindexAni.play();
-        //ContainerAni.play();
-        A1zindexAni.finished.then(() => {
-            A1zindexAni.reverse();
-            //ContainerAni.reverse();
-        })
-
-        var img = document.getElementById('A1_iframe_scale').src;
-        if (img.indexOf('scaleDown.png') != -1) {
-            document.getElementById('A1_iframe_scale').src = 'assets/imgs/scaleUp.png';
-            document.querySelector('#A1_iframe').style.display = 'none';
-        }
-        else {
-            document.getElementById('A1_iframe_scale').src = 'assets/imgs/scaleDown.png';
-            document.querySelector('#A1_iframe').style.display = 'block';
-        }
-    }*/
-
 
     /* first setting of A1_iframe_div */
     anime({
         targets: '#A1_iframe_div',
-        //right: '-360px', //this is a fist instant value
-        //right: '0%',
-        //translateX: '350',
-        //left: '360px', //this is a fist instant value
         loop: false,
         duration: 200,
         autoplay: true,
@@ -471,10 +441,7 @@ let MainData = {
         width: ['6vw', '80vw'],//this is a real default value
         height: '4vh',//this is a real default value
         top: '10vh',//this is a real default value
-        //translateX: ['350', '0'],
         right: '0%',//this is a real default value
-        //left: '0px', //this is a fist instant value
-        //minWidth: '100px',//OVERRIDE default value in css.
         /*zIndex: {
             value: [9, 9],//this is a real default value
             round: true
@@ -489,8 +456,6 @@ let MainData = {
         .add({
             targets: '#A1_iframe_scale',
             opacity: [0, 1],
-            // override the easing parameter
-            //easing: 'spring',
         })
     /* Slide setting of A1_iframe_div */
 
@@ -526,14 +491,11 @@ let MainData = {
         height: ['4vh', '100vh'],//from this real default value to 0%
         top: ['18vh', '0vh'],//from this real default value to 0%
         right: ['0%', '0%'],//from this real default value to 0%
-        //minWidth: '100px',
-        //zIndex: 99,
-        /*zIndex: {
+        zIndex: {
             value: 99,//from this real default value to 99
             round: true
-        },*/
+        },
         loop: false,
-        //delay: 200,
         duration: 500,
         autoplay: false,
         easing: "easeInOutSine"
@@ -542,16 +504,12 @@ let MainData = {
         .add({
             targets: '#A2_iframe',
             opacity: [0, 1],
-            // override the easing parameter
-            //easing: 'spring',
         })
 
-    document.querySelector('#A2_iframe_scale').onclick = function () {
+    document.querySelector('#A2_iframe_div').onclick = function () {
         A2zindexAni.play();
-        //ContainerAni.play();
         A2zindexAni.finished.then(() => {
             A2zindexAni.reverse();
-            //ContainerAni.reverse();
         })
 
         var img = document.getElementById('A2_iframe_scale').src;
@@ -569,9 +527,6 @@ let MainData = {
     /* first setting of A2_iframe_div */
     anime({
         targets: '#A2_iframe_div',
-        //right: '-360px', //this is a fist instant value
-        //right: '0%',
-        //translateX: '350',
         loop: false,
         duration: 200,
         autoplay: true,
@@ -589,10 +544,7 @@ let MainData = {
         width: ['6vw', '75vw'],//this is a real default value
         height: '4vh',//this is a real default value
         top: '18vh',//this is a real default value
-        //translateX: ['350', '0'],
         right: '0%',//this is a real default value
-        //minWidth: '100px',//OVERRIDE default value in css.
-        //left: '60%',
         /*zIndex: {
             value: [8, 8],//this is a real default value
             round: true
@@ -607,8 +559,6 @@ let MainData = {
         .add({
             targets: '#A2_iframe_scale',
             opacity: [0, 1],
-            // override the easing parameter
-            //easing: 'spring',
         })
     /* Slide setting of A2_iframe_div */
 
@@ -644,14 +594,11 @@ let MainData = {
         height: ['4vh', '100vh'],//from this real default value to 0%
         top: ['26vh', '0vh'],//from this real default value to 0%
         right: ['0%', '0%'],//from this real default value to 0%
-        //minWidth: '100px',
-        //zIndex: 99,
-        /*zIndex: {
+        zIndex: {
             value: 99,//from this real default value to 99
             round: true
-        },*/
+        },
         loop: false,
-        //delay: 200,
         duration: 500,
         autoplay: false,
         easing: "easeInOutSine"
@@ -660,16 +607,12 @@ let MainData = {
         .add({
             targets: '#A3_iframe',
             opacity: [0, 1],
-            // override the easing parameter
-            //easing: 'spring',
         })
 
-    document.querySelector('#A3_iframe_scale').onclick = function () {
+    document.querySelector('#A3_iframe_div').onclick = function () {
         A3zindexAni.play();
-        //ContainerAni.play();
         A3zindexAni.finished.then(() => {
             A3zindexAni.reverse();
-            //ContainerAni.reverse();
         })
 
         var img = document.getElementById('A3_iframe_scale').src;
@@ -687,9 +630,6 @@ let MainData = {
     /* first setting of A3_iframe_div */
     anime({
         targets: '#A3_iframe_div',
-        //right: '-360px', //this is a fist instant value
-        //right: '0%',
-        //translateX: '350',
         loop: false,
         duration: 200,
         autoplay: true,
@@ -707,10 +647,7 @@ let MainData = {
         width: ['6vw', '78vw'],//this is a real default value
         height: '4vh',//this is a real default value
         top: '26vh',//this is a real default value
-        //translateX: ['350', '0'],
         right: '0%',//this is a real default value
-        //minWidth: '100px',//OVERRIDE default value in css.
-        //left: '60%',
         /*zIndex: {
             value: [7, 7],//this is a real default value
             round: true
@@ -725,8 +662,6 @@ let MainData = {
         .add({
             targets: '#A3_iframe_scale',
             opacity: [0, 1],
-            // override the easing parameter
-            //easing: 'spring',
         })
     /* Slide setting of A3_iframe_div */
 
@@ -762,14 +697,11 @@ let MainData = {
         height: ['4vh', '100vh'],//from this real default value to 0%
         top: ['34vh', '0vh'],//from this real default value to 0%
         right: ['0%', '0%'],//from this real default value to 0%
-        //minWidth: '100px',
-        //zIndex: 99,
-        /*zIndex: {
+        zIndex: {
             value: 99,//from this real default value to 99
             round: true
-        },*/
+        },
         loop: false,
-        //delay: 200,
         duration: 500,
         autoplay: false,
         easing: "easeInOutSine"
@@ -778,16 +710,12 @@ let MainData = {
         .add({
             targets: '#B1_iframe',
             opacity: [0, 1],
-            // override the easing parameter
-            //easing: 'spring',
         })
 
-    document.querySelector('#B1_iframe_scale').onclick = function () {
+    document.querySelector('#B1_iframe_div').onclick = function () {
         B1zindexAni.play();
-        //ContainerAni.play();
         B1zindexAni.finished.then(() => {
             B1zindexAni.reverse();
-            //ContainerAni.reverse();
         })
 
         var img = document.getElementById('B1_iframe_scale').src;
@@ -805,9 +733,6 @@ let MainData = {
     /* first setting of B1_iframe_div */
     anime({
         targets: '#B1_iframe_div',
-        //right: '-360px', //this is a fist instant value
-        //right: '0%',
-        //translateX: '350',
         loop: false,
         duration: 200,
         autoplay: true,
@@ -825,10 +750,7 @@ let MainData = {
         width: ['6vw', '90vw'],//this is a real default value
         height: '4vh',//this is a real default value
         top: '34vh',//this is a real default value
-        //translateX: ['350', '0'],
         right: '0%',//this is a real default value
-        //minWidth: '100px',//OVERRIDE default value in css.
-        //left: '60%',
         /*zIndex: {
             value: [6, 6],//this is a real default value
             round: true
@@ -843,8 +765,6 @@ let MainData = {
         .add({
             targets: '#B1_iframe_scale',
             opacity: [0, 1],
-            // override the easing parameter
-            //easing: 'spring',
         })
     /* Slide setting of B1_iframe_div */
 
@@ -880,14 +800,11 @@ let MainData = {
         height: ['4vh', '100vh'],//from this real default value to 0%
         top: ['42vh', '0vh'],//from this real default value to 0%
         right: ['0%', '0%'],//from this real default value to 0%
-        //minWidth: '100px',
-        //zIndex: 99,
-        /*zIndex: {
+        zIndex: {
             value: 99,//from this real default value to 99
             round: true
-        },*/
+        },
         loop: false,
-        //delay: 200,
         duration: 500,
         autoplay: false,
         easing: "easeInOutSine"
@@ -896,16 +813,12 @@ let MainData = {
         .add({
             targets: '#B2_iframe',
             opacity: [0, 1],
-            // override the easing parameter
-            //easing: 'spring',
         })
 
-    document.querySelector('#B2_iframe_scale').onclick = function () {
+    document.querySelector('#B2_iframe_div').onclick = function () {
         B2zindexAni.play();
-        //ContainerAni.play();
         B2zindexAni.finished.then(() => {
             B2zindexAni.reverse();
-            //ContainerAni.reverse();
         })
 
         var img = document.getElementById('B2_iframe_scale').src;
@@ -923,9 +836,6 @@ let MainData = {
     /* first setting of B2_iframe_div */
     anime({
         targets: '#B2_iframe_div',
-        //right: '-360px', //this is a fist instant value
-        //right: '0%',
-        //translateX: '350',
         loop: false,
         duration: 200,
         autoplay: true,
@@ -943,10 +853,7 @@ let MainData = {
         width: ['6vw', '86vw'],//this is a real default value
         height: '4vh',//this is a real default value
         top: '42vh',//this is a real default value
-        //translateX: ['350', '0'],
         right: '0%',//this is a real default value
-        //minWidth: '100px',//OVERRIDE default value in css.
-        //left: '60%',
         /*zIndex: {
             value: [5, 5],//this is a real default value
             round: true
@@ -961,8 +868,6 @@ let MainData = {
         .add({
             targets: '#B2_iframe_scale',
             opacity: [0, 1],
-            // override the easing parameter
-            //easing: 'spring',
         })
     /* Slide setting of B2_iframe_div */
 
@@ -998,14 +903,11 @@ let MainData = {
         height: ['4vh', '100vh'],//from this real default value to 0%
         top: ['50vh', '0vh'],//from this real default value to 0%
         right: ['0%', '0%'],//from this real default value to 0%
-        //minWidth: '100px',
-        //zIndex: 99,
-        /*zIndex: {
+        zIndex: {
             value: 99,//from this real default value to 99
             round: true
-        },*/
+        },
         loop: false,
-        //delay: 200,
         duration: 500,
         autoplay: false,
         easing: "easeInOutSine"
@@ -1014,16 +916,12 @@ let MainData = {
         .add({
             targets: '#B3_iframe',
             opacity: [0, 1],
-            // override the easing parameter
-            //easing: 'spring',
         })
 
-    document.querySelector('#B3_iframe_scale').onclick = function () {
+    document.querySelector('#B3_iframe_div').onclick = function () {
         B3zindexAni.play();
-        //ContainerAni.play();
         B3zindexAni.finished.then(() => {
             B3zindexAni.reverse();
-            //ContainerAni.reverse();
         })
 
         var img = document.getElementById('B3_iframe_scale').src;
@@ -1041,9 +939,6 @@ let MainData = {
     /* first setting of B3_iframe_div */
     anime({
         targets: '#B3_iframe_div',
-        //right: '-360px', //this is a fist instant value
-        //right: '0%',
-        //translateX: '350',
         loop: false,
         duration: 200,
         autoplay: true,
@@ -1061,10 +956,7 @@ let MainData = {
         width: ['6vw', '81vw'],//this is a real default value
         height: '4vh',//this is a real default value
         top: '50vh',//this is a real default value
-        //translateX: ['350', '0'],
         right: '0%',//this is a real default value
-        //minWidth: '100px',//OVERRIDE default value in css.
-        //left: '60%',
         /*zIndex: {
             value: [4, 4],//this is a real default value
             round: true
@@ -1079,8 +971,6 @@ let MainData = {
         .add({
             targets: '#B3_iframe_scale',
             opacity: [0, 1],
-            // override the easing parameter
-            //easing: 'spring',
         })
     /* Slide setting of B3_iframe_div */
 
@@ -1116,14 +1006,11 @@ let MainData = {
         height: ['4vh', '100vh'],//from this real default value to 0%
         top: ['58vh', '0vh'],//from this real default value to 0%
         right: ['0%', '0%'],//from this real default value to 0%
-        //minWidth: '100px',
-        //zIndex: 99,
-        /*zIndex: {
+        zIndex: {
             value: 99,//from this real default value to 99
             round: true
-        },*/
+        },
         loop: false,
-        //delay: 200,
         duration: 500,
         autoplay: false,
         easing: "easeInOutSine"
@@ -1132,16 +1019,12 @@ let MainData = {
         .add({
             targets: '#C1_iframe',
             opacity: [0, 1],
-            // override the easing parameter
-            //easing: 'spring',
         })
 
-    document.querySelector('#C1_iframe_scale').onclick = function () {
+    document.querySelector('#C1_iframe_div').onclick = function () {
         C1zindexAni.play();
-        //ContainerAni.play();
         C1zindexAni.finished.then(() => {
             C1zindexAni.reverse();
-            //ContainerAni.reverse();
         })
 
         var img = document.getElementById('C1_iframe_scale').src;
@@ -1159,9 +1042,6 @@ let MainData = {
     /* first setting of C1_iframe_div */
     anime({
         targets: '#C1_iframe_div',
-        //right: '-360px', //this is a fist instant value
-        //right: '0%',
-        //translateX: '350',
         loop: false,
         duration: 200,
         autoplay: true,
@@ -1179,10 +1059,7 @@ let MainData = {
         width: ['6vw', '86vw'],//this is a real default value
         height: '4vh',//this is a real default value
         top: '58vh',//this is a real default value
-        //translateX: ['350', '0'],
         right: '0%',//this is a real default value
-        //minWidth: '100px',//OVERRIDE default value in css.
-        //left: '60%',
         /*zIndex: {
             value: [3, 3],//this is a real default value
             round: true
@@ -1197,8 +1074,6 @@ let MainData = {
         .add({
             targets: '#C1_iframe_scale',
             opacity: [0, 1],
-            // override the easing parameter
-            //easing: 'spring',
         })
     /* Slide setting of C1_iframe_div */
 
@@ -1234,14 +1109,11 @@ let MainData = {
         height: ['4vh', '100vh'],//from this real default value to 0%
         top: ['66vh', '0vh'],//from this real default value to 0%
         right: ['0%', '0%'],//from this real default value to 0%
-        //minWidth: '100px',
-        //zIndex: 99,
-        /*zIndex: {
+        zIndex: {
             value: 99,//from this real default value to 99
             round: true
-        },*/
+        },
         loop: false,
-        //delay: 200,
         duration: 500,
         autoplay: false,
         easing: "easeInOutSine"
@@ -1250,17 +1122,12 @@ let MainData = {
         .add({
             targets: '#C2_iframe',
             opacity: [0, 1],
-            // override the easing parameter
-            //easing: 'spring',
         })
 
-    document.querySelector('#C2_iframe_scale').onclick = function () {
+    document.querySelector('#C2_iframe_div').onclick = function () {
         C2zindexAni.play();
-        //document.querySelector('#C2_iframe').style.display = 'block';
-        //ContainerAni.play();
         C2zindexAni.finished.then(() => {
             C2zindexAni.reverse();
-            //ContainerAni.reverse();
         })
 
         var img = document.getElementById('C2_iframe_scale').src;
@@ -1280,9 +1147,6 @@ let MainData = {
     /* first setting of C2_iframe_div */
     anime({
         targets: '#C2_iframe_div',
-        //right: '-360px', //this is a fist instant value
-        //right: '0%',
-        //translateX: '350',
         loop: false,
         duration: 200,
         autoplay: true,
@@ -1300,14 +1164,7 @@ let MainData = {
         width: ['6vw', '91vw'],//this is a real default value
         height: '4vh',//this is a real default value
         top: '66vh',//this is a real default value
-        //translateX: ['350', '0'],
         right: '0%',//this is a real default value
-        //minWidth: '100px',//OVERRIDE default value in css.
-        //left: '60%',
-        /*zIndex: {
-            value: [2, 2],//this is a real default value
-            round: true
-        },*/
         loop: false,
         delay: 400,
         duration: 500,
@@ -1318,8 +1175,6 @@ let MainData = {
         .add({
             targets: '#C2_iframe_scale',
             opacity: [0, 1],
-            // override the easing parameter
-            //easing: 'spring',
         })
     /* Slide setting of C2_iframe_div */
 
@@ -1355,12 +1210,10 @@ let MainData = {
         height: ['4vh', '100vh'],//from this real default value to 0%
         top: ['74vh', '0vh'],//from this real default value to 0%
         right: ['0%', '0%'],//from this real default value to 0%
-        //minWidth: '100px',
-        //zIndex: 99,
-        /*zIndex: {
+        zIndex: {
             value: 99,//from this real default value to 99
             round: true
-        },*/
+        },
         loop: false,
         duration: 500,
         autoplay: false,
@@ -1370,17 +1223,12 @@ let MainData = {
         .add({
             targets: '#C3_iframe',
             opacity: [0, 1],
-            // override the easing parameter
-            //easing: 'spring',
         })
 
-    document.querySelector('#C3_iframe_scale').onclick = function () {
+    document.querySelector('#C3_iframe_div').onclick = function () {
         C3zindexAni.play();
-        //document.querySelector('#C3_iframe').style.display = 'block';
-        //ContainerAni.play();
         C3zindexAni.finished.then(() => {
             C3zindexAni.reverse();
-            //ContainerAni.reverse();
         })
 
         var img = document.getElementById('C3_iframe_scale').src;
@@ -1398,10 +1246,6 @@ let MainData = {
     /* first setting of C3_iframe_div */
     anime({
         targets: '#C3_iframe_div',
-        //right: '-360px', //this is a fist instant value
-        //right: '0%',
-        //translateX: '350',
-        //minWidth: '100px',//OVERRIDE default value in css.
         loop: false,
         duration: 200,
         autoplay: true,
@@ -1417,12 +1261,9 @@ let MainData = {
     const C3startAni = anime.timeline({
         targets: '#C3_iframe_div',
         width: ['6vw', '81vw'],//this is a real default value
-        //opacity: [0, 1],
         height: '4vh',//this is a real default value
         top: '74vh',//this is a real default value
-        //translateX: ['350', '0'],
         right: '0%',//this is a real default value
-        //minWidth: '100px',//OVERRIDE default value in css.
         /*zIndex: {
             value: [1, 1],//this is a real default value
             round: true
@@ -1437,36 +1278,25 @@ let MainData = {
         .add({
             targets: '#C3_iframe_scale',
             opacity: [0, 1],
-            // override the easing parameter
-            //easing: 'spring',
         })
 
-
-    /* Slide setting of C3_iframe_div */
-    /*document.querySelector('#C3_iframe_scale').style.pointerEvents = 'none';
-    document.querySelector('#C2_iframe_scale').style.pointerEvents = 'none';
-    document.querySelector('#C1_iframe_scale').style.pointerEvents = 'none';
-    document.querySelector('#B3_iframe_scale').style.pointerEvents = 'none';
-    document.querySelector('#B2_iframe_scale').style.pointerEvents = 'none';
-    document.querySelector('#B1_iframe_scale').style.pointerEvents = 'none';
-    document.querySelector('#A3_iframe_scale').style.pointerEvents = 'none';
-    document.querySelector('#A2_iframe_scale').style.pointerEvents = 'none';
-    document.querySelector('#A1_iframe_scale').style.pointerEvents = 'none';*/
     /*
      * Trigger all frames slide in-out after click #bt1 
      */
+    document.querySelector('.slides_container').style.display = 'block';
+    document.querySelector('#C3_iframe_div').style.pointerEvents = 'none';
+    document.querySelector('#C2_iframe_div').style.pointerEvents = 'none';
+    document.querySelector('#C1_iframe_div').style.pointerEvents = 'none';
+    document.querySelector('#B3_iframe_div').style.pointerEvents = 'none';
+    document.querySelector('#B2_iframe_div').style.pointerEvents = 'none';
+    document.querySelector('#B1_iframe_div').style.pointerEvents = 'none';
+    document.querySelector('#A3_iframe_div').style.pointerEvents = 'none';
+    document.querySelector('#A2_iframe_div').style.pointerEvents = 'none';
+    document.querySelector('#A1_iframe_div').style.pointerEvents = 'none';
+
     document.querySelector('#bt1').onclick = function () {
         //disable the click event
         document.getElementById('bt1').style.pointerEvents = 'none';
-        /*document.querySelector('#C3_iframe').style.display = 'none';
-        document.querySelector('#C2_iframe').style.display = 'none';
-        document.querySelector('#C1_iframe').style.display = 'none';
-        document.querySelector('#B3_iframe').style.display = 'none';
-        document.querySelector('#B2_iframe').style.display = 'none';
-        document.querySelector('#B1_iframe').style.display = 'none';
-        document.querySelector('#A3_iframe').style.display = 'none';
-        document.querySelector('#A2_iframe').style.display = 'none';
-        document.querySelector('#A1_iframe').style.display = 'none';*/
         A1startAni.play();
         A2startAni.play();
         A3startAni.play();
@@ -1476,16 +1306,7 @@ let MainData = {
         C1startAni.play();
         C2startAni.play();
         C3startAni.play();
-        /*document.querySelector('#C3_iframe_scale').style.pointerEvents = 'auto';
-        document.querySelector('#C2_iframe_scale').style.pointerEvents = 'auto';
-        document.querySelector('#C1_iframe_scale').style.pointerEvents = 'auto';
-        document.querySelector('#B3_iframe_scale').style.pointerEvents = 'auto';
-        document.querySelector('#B2_iframe_scale').style.pointerEvents = 'auto';
-        document.querySelector('#B1_iframe_scale').style.pointerEvents = 'auto';
-        document.querySelector('#A3_iframe_scale').style.pointerEvents = 'auto';
-        document.querySelector('#A2_iframe_scale').style.pointerEvents = 'auto';
-        document.querySelector('#A1_iframe_scale').style.pointerEvents = 'auto';*/
-        //SlideContainerAni.play();
+
         A1startAni.finished.then(() => {
             A1startAni.reverse();
             A2startAni.reverse();
@@ -1496,19 +1317,73 @@ let MainData = {
             C1startAni.reverse();
             C2startAni.reverse();
             C3startAni.reverse();
-            //SlideContainerAni.reverse();
             //re-enable the click event
             document.getElementById('bt1').style.pointerEvents = 'auto';
-            /*var x = document.getElementById("A1_iframe_scale");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
-            }*/
         })
 
-    }
+        var xslide = document.querySelector(".slides_container");
+        if (xslide.style.display === "block") {
+            xslide.style.display = "none";
+        } else {
+            xslide.style.display = "block";
+        }
+        //slide-in clickable, slide-out unclickable.
+        var xa1 = document.getElementById("A1_iframe_div");
+        if (xa1.style.pointerEvents === "auto") {
+            xa1.style.pointerEvents = "none";
+        } else {
+            xa1.style.pointerEvents = "auto";
+        }
+        var xa2 = document.getElementById("A2_iframe_div");
+        if (xa2.style.pointerEvents === "auto") {
+            xa2.style.pointerEvents = "none";
+        } else {
+            xa2.style.pointerEvents = "auto";
+        }
+        var xa3 = document.getElementById("A3_iframe_div");
+        if (xa3.style.pointerEvents === "auto") {
+            xa3.style.pointerEvents = "none";
+        } else {
+            xa3.style.pointerEvents = "auto";
+        }
+        var xb1 = document.getElementById("B1_iframe_div");
+        if (xb1.style.pointerEvents === "auto") {
+            xb1.style.pointerEvents = "none";
+        } else {
+            xb1.style.pointerEvents = "auto";
+        }
+        var xb2 = document.getElementById("B2_iframe_div");
+        if (xb2.style.pointerEvents === "auto") {
+            xb2.style.pointerEvents = "none";
+        } else {
+            xb2.style.pointerEvents = "auto";
+        }
+        var xb3 = document.getElementById("B3_iframe_div");
+        if (xb3.style.pointerEvents === "auto") {
+            xb3.style.pointerEvents = "none";
+        } else {
+            xb3.style.pointerEvents = "auto";
+        }
+        var xc1 = document.getElementById("C1_iframe_div");
+        if (xc1.style.pointerEvents === "auto") {
+            xc1.style.pointerEvents = "none";
+        } else {
+            xc1.style.pointerEvents = "auto";
+        }
+        var xc2 = document.getElementById("C2_iframe_div");
+        if (xc2.style.pointerEvents === "auto") {
+            xc2.style.pointerEvents = "none";
+        } else {
+            xc2.style.pointerEvents = "auto";
+        }
+        var xc3 = document.getElementById("C3_iframe_div");
+        if (xc3.style.pointerEvents === "auto") {
+            xc3.style.pointerEvents = "none";
+        } else {
+            xc3.style.pointerEvents = "auto";
+        }
 
+    }
     /* Trigger all frames slide in-out after click #bt1 */
 
     /*
@@ -1520,21 +1395,15 @@ let MainData = {
         SlideContainerAni.play();
         SlideContainerAni.finished.then(() => {
             SlideContainerAni.reverse();
-            //ContainerAni.reverse();
         })
         document.getElementById('bt1').style.pointerEvents = 'none';
         document.getElementById('bt2').style.pointerEvents = 'none';
     }
     // Close share element.
     document.querySelector('#close_btn').onclick = function () {
-        //var popup_share = document.getElementById("popup_share");
-        //popup_share.style.display = "none";
-        //var popup_share = document.getElementById("imgContainer");
-        //popup_share.style.display = "none";
         SlideContainerAni.play();
         SlideContainerAni.finished.then(() => {
             SlideContainerAni.reverse();
-            //ContainerAni.reverse();
         })
         document.getElementById('bt1').style.pointerEvents = 'auto';
         document.getElementById('bt2').style.pointerEvents = 'auto';
@@ -1628,7 +1497,7 @@ let MainData = {
     /*
      * Change iframe's z-index by clicking itself
      */
-    function checkZ_index(id) {
+    /*function checkZ_index(id) {
         var class_elements = document.getElementsByClassName("iframe_div");
         var maxi_zIndex_num = 10;
         for (var i = 0, len = class_elements.length; i < len; i++) {
@@ -1671,7 +1540,7 @@ let MainData = {
     }
     document.querySelector('#C3_iframe_div').onclick = function () {
         checkZ_index("C3_iframe_div");
-    }
+    }*/
     /* Change iframe's z-index by clicking itself*/
 
 })();
